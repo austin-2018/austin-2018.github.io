@@ -16,3 +16,17 @@
 
          [Display(Name = "Customer Name")]                
             public string CustomerFullName { get { return String.Format("{0} {1}", myModel.FirstName, myModel.LastName) }}
+            
+##### EXCERPT 2
+
+###### WikiPedia has a more complete description of Model vs. ModelView than you'll get in an SO answer: http://en.wikipedia.org/wiki/Model_View_ViewModel
+
+###### I quote:
+
+###### Model: as in the classic MVC pattern, the model refers to either (a) an object model that represents the real state content (an object-oriented approach), or (b) the data access layer that represents that content (a data-centric approach).
+
+###### View: as in the classic MVC pattern, the view refers to all elements displayed by the GUI such as buttons, windows, graphics, and other controls.
+
+###### ViewModel: the ViewModel is a “Model of the View” meaning it is an abstraction of the View that also serves in data binding between the View and the Model. It could be seen as a specialized aspect of what would be a Controller (in the MVC pattern) that acts as a data binder/converter that changes Model information into View information and passes commands from the View into the Model. The ViewModel exposes public properties, commands, and abstractions. The ViewModel has been likened to a conceptual state of the data as opposed to the real state of the data in the Model.
+
+
