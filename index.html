@@ -47,11 +47,14 @@
        <div class="container">
           
             <div class="col-md-4">
-            <!-- source code https://www.w3schools.com/htmL/tryit.asp?filename=tryhtml5_geolocation -->   
+            <!-- source code https://www.w3schools.com/htmL/tryit.asp?filename=tryhtml5_geolocation --> 
+                 <div id="map">
+                        <iframe id="google_map" src="https://maps.google.co.uk/?output=embed"></iframe>
+                  </div><!-- map -->
 
                <p>Click the button to get your coordinates.</p>
 
-               <button onclick="getLocation()">Try It</button>
+               <button class="btn btn-primary btn-lg" onclick="getLocation()">Try It</button>
 
                <p id="demo"></p>
 
