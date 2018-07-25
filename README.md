@@ -8,4 +8,8 @@
 
 #### Sources Used to Complete this Platform
 
+
+
+##### Google Maps Platform | Maps JavaScript API | https://developers.google.com/maps/documentation/javascript/tutorial
 ##### HTML5 Tutorials: Detect user's location with HTML Geolocation | https://www.youtube.com/watch?v=BqI54Snkw0s
+ 
