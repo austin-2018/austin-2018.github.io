@@ -45,40 +45,27 @@
      <div class="space25">&nbsp;</div><!-- holder for future accessibility notifications -->
        <div class="row">
        <div class="container">
+          
             <div class="col-md-4">
                
-              
-               <div id="map">
-                     <iframe id="google_map" src="https://maps.google.co.uk/?output=embed"></iframe>
-               </div><!-- map -->
-               <div>
-                  <a href="#" id="get_location">Get Location</a>
-               </div>
-            </div><!-- col md 4 -->       
+                  <div id="map">
+                        <iframe id="google_map" src="https://maps.google.co.uk/?output=embed"></iframe>
+                  </div><!-- map -->
+                  <div>
+                     <a href="#" id="get_location">Get Location</a>
+                  </div>
+               <script>
+               
+               
+               </script>
+               
+                 </div><!-- col md 4 -->       
               <div class="col-md-8">
                    <div style="text-align:center;display:none;"><img src="images/video.png" alt=""></div>
                    <div class="video-header">
                       <h1>Find My Family</h1>   
                    </div>
-                 <script>
-                 
-                 var c = function(pos) {
-  var lat     = pos.coords.latitude,
-      long    = pos.coords.longitude,
-      coords  = lat + '' + ',' + '' + long;
-  
-  document.getElementById('google_map').setAttributte('src', 'https://maps.google.co.uk/?q=' + coords + '&z=60&output=embed');
-}
-
-document.getElementById('get_location').onclick = function {
-  navigator.geolocation.getCurrentPosition(c);
-  return false;
-}
-                 
-                 
-                 
-                 </script>
-                 
+               
                  
                  
                  
