@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+   <!-- source for script https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Sections_and_Outlines_of_an_HTML5_document -->
+   <!--[if lt IE 9]>
+  <script>
+    document.createElement("header" );
+    document.createElement("footer" );
+    document.createElement("section"); 
+    document.createElement("aside"  );
+    document.createElement("nav"    );
+    document.createElement("article"); 
+    document.createElement("hgroup" ); 
+    document.createElement("time"   );
+  </script>
+  <noscript>
+     <strong>Warning !</strong>
+     Because your browser does not support HTML5, some elements are created using JavaScript.
+     Unfortunately your browser has disabled scripting. Please enable it in order to display this page.
+  </noscript>
+<![endif]-->
+<head>
+  <title>Proof of Concept | Home Page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/autocomplete.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+ </head>
+  <body onload="showMyFace()">
+     <div class="space25">&nbsp;</div><!-- holder for future accessibility notifications -->
+       <div class="row">
+       <div class="container">
+            <div class="col-md-4"><!-- contains chat -->
+           <iframe
+              width="350"
+              height="430"
+              src="https://console.dialogflow.com/api-client/demo/embedded/2826f62d-5973-4ab8-b5c8-84a4d026e807">
+          </iframe>
+            </div><!-- col md 4 -->       
+              <div class="col-md-8">
+                   <div style="text-align:center;display:none;"><img src="images/video.png" alt=""></div>
+                   <div class="video-header">
+                      <h1>Proof of Concept: Meet Me</h1>   
+                   </div>
+                 
+                   <div><!-- wrapper for videos -->
+                      <video id="yourVideo" autoplay muted playsinline></video>
+                      <video id="friendsVideo" autoplay playsinline></video>
+                   </div>   
+                   <div>
+                  <!-- IMPORTANT REMBER TO CHANGE ID ON BUTTON -->
+                   <button onclick="showFriendsFace()" type="button" class="btn btn-primary btn-lg"><span class="glyphicon glyphicon-facetime-video" aria-hidden="true"></span> Call</button>
+                   </div>   
+                   <script src="js/script.js"></script>
+                </div><!-- col-md  8 -->
+            </div><!-- container -->  
+       </div><!-- row -->
+
+  </body> 
+</html>
