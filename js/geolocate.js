@@ -6,7 +6,7 @@ var c = function(pos) {
   document.getElementById('google_map').setAttributte('src', 'https://maps.google.co.uk/?q=' + coords + '&z=60&output=embed');
 }
 
-document.getElementById('get_location').onclick = function {
+document.getElementById('get_location').onclick = function() {
   navigator.geolocation.getCurrentPosition(c);
   return false;
 }
