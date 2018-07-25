@@ -9,3 +9,4 @@ Below is a summary of the reunification process that the Departments of Health a
 #### This document is intended to educate the public about the detailed interdepartmental reunification plan presented to the court. It does not represent new policy.
 
 #### Read the full plan here - PDF (Added to documents section, as: UAC-Tri-Department-Process.pdf)
+![](images/5-step-process-for-reunification.png)
