@@ -47,27 +47,29 @@
        <div class="container">
           
             <div class="col-md-4">
-               
-                  <div id="map">
-                        <iframe id="google_map" src="https://maps.google.co.uk/?output=embed"></iframe>
-                  </div><!-- map -->
-                  <div>
-                     <a href="#" id="get_location">Get Location</a>
-                  </div>
+            <!-- source code https://www.w3schools.com/htmL/tryit.asp?filename=tryhtml5_geolocation -->   
+
+               <p>Click the button to get your coordinates.</p>
+
+               <button onclick="getLocation()">Try It</button>
+
+               <p id="demo"></p>
+
                <script>
-               
-                        var c = function(pos) {
-                          var lat     = pos.coords.latitude,
-                              long    = pos.coords.longitude,
-                              coords  = lat + ',' + long;
+               var x = document.getElementById("demo");
 
-                          document.getElementById('google_map').setAttributte('src', 'https://maps.google.co.uk/?q=" + coords + "&z=60&output=embed');
-                        }
+               function getLocation() {
+                   if (navigator.geolocation) {
+                       navigator.geolocation.getCurrentPosition(showPosition);
+                   } else { 
+                       x.innerHTML = "Geolocation is not supported by this browser.";
+                   }
+               }
 
-                          document.getElementById('get_location').onclick = function() {
-                          navigator.geolocation.getCurrentPosition(c);
-                          return false;
-                        }
+               function showPosition(position) {
+                   x.innerHTML = "Latitude: " + position.coords.latitude + 
+                   "<br>Longitude: " + position.coords.longitude;
+               }
                </script>
                
                  </div><!-- col md 4 -->       
