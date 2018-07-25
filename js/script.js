@@ -5,7 +5,6 @@
 //TO DO NOTE THERE IS NO STORAGE BUCKET, and the project ID has a suffix of 5f6de
 //The storage bucket for the launchcode sister version is ackathon-video-chat.appspot.com
   // Initialize Firebase
-  // Initialize Firebase
   var config = {
     apiKey: "AIzaSyD3fDQFcJoftOMDzlQ43NOqb7CVPw7NIgM",
     authDomain: "hackathon-video-chat-5f6de.firebaseapp.com",
