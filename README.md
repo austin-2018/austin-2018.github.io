@@ -5,3 +5,7 @@
 #### One problem is that some of the parents have already been deported.  This platform aims to address that.  
 
 #### The Internet can cross borders.
+
+#### Sources Used to Complete this Platform
+
+##### HTML5 Tutorials: Detect user's location with HTML Geolocation | https://www.youtube.com/watch?v=BqI54Snkw0s
