@@ -36,7 +36,8 @@
 
 <!-- Comment out (or don't include) services you don't want to use -->
 <!-- <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-storage.js"></script> -->
-  <!-- end firebase authentication --> 
+  <!-- end firebase authentication -->
+ 
   <link rel="stylesheet" href="css/main.css">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
  </head>
@@ -44,19 +45,40 @@
      <div class="space25">&nbsp;</div><!-- holder for future accessibility notifications -->
        <div class="row">
        <div class="container">
+          
             <div class="col-md-4">
                
-               <a href="#" id="get_location">Get Location</a>
-               <div id="map">
-                     <iframe id="google_map" src="https://maps.google.co.uk/?output=embed"></iframe>
-               </div><!-- map -->
+                  <div id="map">
+                        <iframe id="google_map" src="https://maps.google.co.uk/?output=embed"></iframe>
+                  </div><!-- map -->
+                  <div>
+                     <a href="#" id="get_location">Get Location</a>
+                  </div>
+               <script>
                
-            </div><!-- col md 4 -->       
+                        var c = function(pos) {
+                          var lat     = pos.coords.latitude,
+                              long    = pos.coords.longitude,
+                              coords  = lat + ',' + long;
+
+                          document.getElementById('google_map').setAttributte('src', 'https://maps.google.co.uk/?q=" + coords + "&z=60&output=embed');
+                        }
+
+                          document.getElementById('get_location').onclick = function() {
+                          navigator.geolocation.getCurrentPosition(c);
+                          return false;
+                        }
+               </script>
+               
+                 </div><!-- col md 4 -->       
               <div class="col-md-8">
                    <div style="text-align:center;display:none;"><img src="images/video.png" alt=""></div>
                    <div class="video-header">
                       <h1>Find My Family</h1>   
                    </div>
+               
+                 
+                 
                  
                    <div><!-- wrapper for videos -->
                       <video id="yourVideo" autoplay muted playsinline></video>
@@ -67,7 +89,8 @@
                    <button onclick="showFriendsFace()" type="button" class="btn btn-primary btn-lg"><span class="glyphicon glyphicon-facetime-video" aria-hidden="true"></span> Call</button>
                    </div>   
                    <script src="js/script.js"></script>
-                   <script src="js/geolocate.js"></script>
+                   <script async defer src="js/geolocate.js"></script>
+                   
                 </div><!-- col-md  8 -->
             </div><!-- container -->  
        </div><!-- row -->
