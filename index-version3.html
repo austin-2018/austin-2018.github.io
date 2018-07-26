@@ -47,30 +47,48 @@
        <div class="container">
           
             <div class="col-md-4">
-            <!-- source code https://www.w3schools.com/htmL/tryit.asp?filename=tryhtml5_geolocation -->   
+            <!-- source code https://www.w3schools.com/htmL/tryit.asp?filename=tryhtml5_geolocation --> 
+                 <div id="map">
+                        <iframe id="google_map" src="https://maps.google.co.uk/?output=embed"></iframe>
+                  </div><!-- map -->
 
                <p>Click the button to get your coordinates.</p>
 
-               <button onclick="getLocation()">Try It</button>
+               <button class="btn btn-primary btn-lg" onclick="getLocation()">Get Location</button>
 
-               <p id="demo"></p>
+               <div id="demo"></div>
+               <div>
+                  <p>Send in the Information</p>
+                  <form>
+                       Latitude:<br>
+                       <input type="text" id="latcoords" name="latcoords"><br>
+                       Longitude:<br>
+                       <input type="text" id="longcoords" name="longcoords"><br>
+                     <button class="btn btn-primary btn-lg" value="Submit">Submit</button>
+                   </form>
+               </div>
+                     <script>
+                     var x       = document.getElementById("demo"),
+                         xlat    = document.getElementById("latcoords"),
+                         xlong   = document.getElementById("longcoords");
+                        
+                     function getLocation() {
+                         if (navigator.geolocation) {
+                             navigator.geolocation.getCurrentPosition(showPosition);
+                         } else { 
+                             x.innerHTML = "Geolocation is not supported by this browser.";
+                         }
+                     }
 
-               <script>
-               var x = document.getElementById("demo");
-
-               function getLocation() {
-                   if (navigator.geolocation) {
-                       navigator.geolocation.getCurrentPosition(showPosition);
-                   } else { 
-                       x.innerHTML = "Geolocation is not supported by this browser.";
-                   }
-               }
-
-               function showPosition(position) {
-                   x.innerHTML = "Latitude: " + position.coords.latitude + 
-                   "<br>Longitude: " + position.coords.longitude;
-               }
-               </script>
+                     function showPosition(position) {
+                         x.innerHTML = "Latitude: " + position.coords.latitude + 
+                         "<br>Longitude: " + position.coords.longitude;
+                        
+                        document.getElementById("latcoords").value = position.coords.latitude;
+                        document.getElementById("longcoords").value = position.coords.longitude;
+                        ///document.getElementById("longcoords").value = longcoords.lng();
+                     }
+                     </script>
                
                  </div><!-- col md 4 -->       
               <div class="col-md-8">
@@ -79,9 +97,6 @@
                       <h1>Find My Family</h1>   
                    </div>
                
-                 
-                 
-                 
                    <div><!-- wrapper for videos -->
                       <video id="yourVideo" autoplay muted playsinline></video>
                       <video id="friendsVideo" autoplay playsinline></video>
@@ -91,7 +106,7 @@
                    <button onclick="showFriendsFace()" type="button" class="btn btn-primary btn-lg"><span class="glyphicon glyphicon-facetime-video" aria-hidden="true"></span> Call</button>
                    </div>   
                    <script src="js/script.js"></script>
-                   <script async defer src="js/geolocate.js"></script>
+                   <!-- <script async defer src="js/geolocate.js"></script>  -->
                    
                 </div><!-- col-md  8 -->
             </div><!-- container -->  
