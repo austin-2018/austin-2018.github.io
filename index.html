@@ -106,42 +106,20 @@
                    <button onclick="showFriendsFace()" type="button" class="btn btn-primary btn-lg"><span class="glyphicon glyphicon-facetime-video" aria-hidden="true"></span> Call</button>
                    </div>
                  ///////
-                 <div>
-                 <video autoplay></video>
-<img src="">
-<canvas style="display:none;"></canvas>
-
+                  <input id="myFileInput" type="file" accept="image/*;capture=camera">
 <script>
-const captureVideoButton =
-  document.querySelector('#screenshot .capture-button');
-const screenshotButton = document.querySelector('#screenshot-button');
-const img = document.querySelector('#screenshot img');
-const video = document.querySelector('#screenshot video');
+var myInput = document.getElementById('myFileInput');
 
-const canvas = document.createElement('canvas');
+function sendPic() {
+    var file = myInput.files[0];
 
-captureVideoButton.onclick = function() {
-  navigator.mediaDevices.getUserMedia(constraints).
-    then(handleSuccess).catch(handleError);
-};
-
-screenshotButton.onclick = video.onclick = function() {
-  canvas.width = video.videoWidth;
-  canvas.height = video.videoHeight;
-  canvas.getContext('2d').drawImage(video, 0, 0);
-  // Other browsers will fall back to image/png
-  img.src = canvas.toDataURL('image/webp');
-};
-
-function handleSuccess(stream) {
-  screenshotButton.disabled = false;
-  video.srcObject = stream;
+    // Send file here either by adding it to a `FormData` object 
+    // and sending that via XHR, or by simply passing the file into 
+    // the `send` method of an XHR instance.
 }
-</script>
-                 
-                 </div>       
-                 
-                 
+
+myInput.addEventListener('change', sendPic, false);
+                 </script>                
                  //////
                    <script src="js/script.js"></script>
                    <!-- <script async defer src="js/geolocate.js"></script>  -->
