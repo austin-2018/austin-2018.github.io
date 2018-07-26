@@ -113,15 +113,7 @@
   
                  
                  <!-- Second set of videos for image capture -->
-                 <div><!-- Source of code courtesy https://www.html5rocks.com/en/tutorials/getusermedia/intro/ -->
-                    
-                       <video autoplay></video>
-                        <button class="capture-button btn btn-primary btn-lg">Capture video</button>
-                        <img src="">
-                        <canvas style="display:none;"></canvas>
-                        <button id="screenshot-button" class="btn btn-primary btn-lg">Get ScreenShot</button>
-                    
-                 </div> 
+ 
                     
                     <script>
                            function hasGetUserMedia() {
@@ -159,7 +151,22 @@
 
                            navigator.mediaDevices.getUserMedia(vgaConstraints).
                              then((stream) => {video.srcObject = stream});             
+                 </script>
+                 
+                     <div>
+                      
+                       <video autoplay></video>
+                        <button class="capture-button btn btn-primary btn-lg">Capture video</button>
+                        <img src="">
+                        <canvas style="display:none;"></canvas>
+                        <button id="screenshot-button" class="btn btn-primary btn-lg">Get ScreenShot</button>
                     
+                 </div> 
+                 
+                 
+                 
+                 
+                 <script>
                 
                            const captureVideoButton =
                              document.querySelector('#screenshot .capture-button');
