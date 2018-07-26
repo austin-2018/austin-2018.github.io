@@ -64,7 +64,7 @@
                        <input type="text" id="latcoords" name="latcoords"><br>
                        Longitude:<br>
                        <input type="text" id="longcoords" name="longcoords"><br>
-                     <button class="btn btn-primary btn-lg" type="submit" value="Submit"></button>
+                     <button class="btn btn-primary btn-lg" value="Submit">Submit</button>
                    </form>
                </div>
                      <script>
@@ -85,9 +85,8 @@
                          "<br>Longitude: " + position.coords.longitude;
                         
                         document.getElementById("latcoords").value = position.coords.latitude;
-                        document.getElementById("longcoords").value = longcoords.lng();
-                        xlat.innerHTML = position.coords.latitude;
-                        xlong.innerHTML = position.coords.longitude;
+                        document.getElementById("longcoords").value = position.coords.longitude;
+                        //document.getElementById("longcoords").value = longcoords.lng();
                      }
                      </script>
                
