@@ -93,6 +93,7 @@
                
               </div><!-- col md 4 -->       
               <div class="col-md-8">
+                 <!-- first set of video area -->
                    <div class="video-header">
                       <h1>Find My Family</h1>   
                    </div>
@@ -105,28 +106,16 @@
                   <!-- IMPORTANT REMBER TO CHANGE ID ON BUTTON -->
                    <button onclick="showFriendsFace()" type="button" class="btn btn-primary btn-lg"><span class="glyphicon glyphicon-facetime-video" aria-hidden="true"></span> Call</button>
                    </div>
-                 ///////
-                  <input id="myFileInput" type="file" accept="image/*;capture=camera">
-<script>
-var myInput = document.getElementById('myFileInput');
-
-function sendPic() {
-    var file = myInput.files[0];
-
-    // Send file here either by adding it to a `FormData` object 
-    // and sending that via XHR, or by simply passing the file into 
-    // the `send` method of an XHR instance.
-}
-
-myInput.addEventListener('change', sendPic, false);
-                 </script>                
-                 //////
-                   <script src="js/script.js"></script>
-                   <!-- <script async defer src="js/geolocate.js"></script>  -->
+                 <!-- end first set of video -->
+                 <!-- image capture -->
+                 <div>&nbsp;</div>
+                 
+                 <!-- end image capture -->
                    
                 </div><!-- col-md  8 -->
             </div><!-- container -->  
        </div><!-- row -->
-
+       <script src="js/script.js"></script>
+      <!-- <script async defer src="js/geolocate.js"></script>  -->
   </body> 
 </html>
