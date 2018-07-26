@@ -13,6 +13,7 @@
 ##### Google Maps Platform | Maps JavaScript API | https://developers.google.com/maps/documentation/javascript/tutorial
 ##### HTML5 Rocks | Capturing Audio and Video in HTML5 | https://www.html5rocks.com/en/tutorials/getusermedia/intro/
 ##### HTML5 Tutorials: Detect user's location with HTML Geolocation | https://www.youtube.com/watch?v=BqI54Snkw0s
+##### Stack Overflow | https://stackoverflow.com/questions/23916566/html5-input-type-file-accept-image-capture-camera-display-as-image-rat
 ##### W3 | Media Capture | https://www.w3.org/TR/html-media-capture/
 ##### W3C Schools | Using HTML Geolocation | https://www.w3schools.com/htmL/tryit.asp?filename=tryhtml5_geolocation
 
