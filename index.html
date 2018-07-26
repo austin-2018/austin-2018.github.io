@@ -114,6 +114,19 @@
                  
                  <!-- Second set of videos for image capture -->
                  <div><!-- Source of code courtesy https://www.html5rocks.com/en/tutorials/getusermedia/intro/ -->
+                    <script>
+                           function hasGetUserMedia() {
+                             return !!(navigator.mediaDevices &&
+                               navigator.mediaDevices.getUserMedia);
+                           }
+
+                           if (hasGetUserMedia()) {
+                             // Good to go!
+                           } else {
+                             alert('getUserMedia() is not supported by your browser');
+                           }
+                       
+                    </script>   
                  
                        <!-- <video autoplay></video>  -->
                         <div id="screenshot">
