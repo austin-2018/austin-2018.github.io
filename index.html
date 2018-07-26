@@ -158,17 +158,10 @@
                              then((stream) => {video.srcObject = stream});             
                     </script>
                        
-                    </script>   
-                 
-                       <!-- <video autoplay></video>  -->
-                        <div id="screenshot">
-                           <video class="videostream" autoplay=""></video>
-                           <img id="screenshot-img">
-                    
-                          <button class="capture-button">Capture video</button> 
-                           
+                        <video autoplay></video>
+                        <img src="">
                         <canvas style="display:none;"></canvas>
-                        </div><!-- id screenshot -->
+
                         <script>
                         const captureVideoButton =
                           document.querySelector('#screenshot .capture-button');
@@ -195,7 +188,7 @@
                           screenshotButton.disabled = false;
                           video.srcObject = stream;
                         }
-                    </script>
+                        </script>
                        <button id="screenshot-button" class="capture-button btn btn-primary btn-lg">Get ScreenShot</button>
                  </div>
                  
