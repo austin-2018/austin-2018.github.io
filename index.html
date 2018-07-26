@@ -36,7 +36,7 @@
 
 <!-- Comment out (or don't include) services you don't want to use -->
 <!-- <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-storage.js"></script> -->
-<!-- end firebase authentication NEEDED FOR FIRST SET OF VIDEOS-->
+  <!-- end firebase authentication -->
  
   <link rel="stylesheet" href="css/main.css">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
@@ -53,6 +53,7 @@
                   </div><!-- map -->
 
                <p>Click the button to get your coordinates.</p>
+
                <button class="btn btn-primary btn-lg" onclick="getLocation()">Get Location</button>
 
                <div id="demo"></div><br />
@@ -65,7 +66,7 @@
                        <input type="text" id="longcoords" name="longcoords"><br>
                        <!-- image capture see https://www.html5rocks.com/en/tutorials/getusermedia/intro/ -->
                        <input type="file" accept="image/*;capture=camera"><br >
-                     <button class="capture-button btn btn-primary btn-lg" value="Submit">Submit</button>
+                     <button class="btn btn-primary btn-lg" value="Submit">Submit</button>
                    </form>
                </div>
                      <script>
@@ -98,24 +99,21 @@
                    </div>
                
                    <div><!-- wrapper for videos -->
-                      <video id="yourVideo" autoplay muted playsinline class="videostream video1"></video>
-                      <!-- class videostream added to first video for screenshot capture -->
+                      <video id="yourVideo" autoplay muted playsinline class="video1"></video>
                       <video id="friendsVideo" autoplay playsinline class="video2"></video>
                    </div>   
                    <div>
                   <!-- IMPORTANT REMBER TO CHANGE ID ON BUTTON -->
-                   <button onclick="showFriendsFace()" type="button" id="screenshot-button" class="btn btn-primary btn-lg"><span class="glyphicon glyphicon-facetime-video" aria-hidden="true"></span> Call</button>
-                      <!-- id #screenshot-button added to button in order to enable snapshot capture -->
+                   <button onclick="showFriendsFace()" type="button" class="btn btn-primary btn-lg"><span class="glyphicon glyphicon-facetime-video" aria-hidden="true"></span> Call</button>
                    </div>
-                  <!-- end first set of video -->
-                  <!-- image capture -->
-                  <div><!-- Source of code courtesy https://www.html5rocks.com/en/tutorials/getusermedia/intro/ -->
+                 <!-- end first set of video -->
+                 <!-- image capture -->
+                 <div><!-- Source of code courtesy https://www.html5rocks.com/en/tutorials/getusermedia/intro/ -->
                  
                        <!-- <video autoplay></video>  -->
                         <div id="screenshot">
                            <img id="screenshot-image">
                            <img src="">
-                           <!-- needs checking -->
                         <canvas style="display:none;"></canvas>
                         </div><!-- id screenshot -->
                         <script>
@@ -145,8 +143,8 @@
                           video.srcObject = stream;
                         }
                     </script>
-                       <button id="screenshot-button" class="btn-primary btn-lg" disabled >Get ScreenShot</button>
-                  </div>
+                       <button id="screenshot-button" class="capture-button btn btn-primary btn-lg">Get ScreenShot</button>
+                 </div>
                  
                  <!-- end image capture -->
                    
