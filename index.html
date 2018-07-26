@@ -84,8 +84,7 @@
                          x.innerHTML = "Latitude: " + position.coords.latitude + 
                          "<br>Longitude: " + position.coords.longitude;
                         
-                        
-                        document.getElementById("latcoords").value = latcoords.lat();
+                        document.getElementById("latcoords").value = position.coords.latitude;
                         xlat.innerHTML = position.coords.latitude;
                         xlong.innerHTML = position.coords.longitude;
                      }
