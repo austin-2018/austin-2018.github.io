@@ -83,8 +83,11 @@
                      function showPosition(position) {
                          x.innerHTML = "Latitude: " + position.coords.latitude + 
                          "<br>Longitude: " + position.coords.longitude;
-                        xlat.innerHTML = position.coords.latitude.value();
-                        xlong.innerHTML = position.coords.longitude.value();
+                        
+                        
+                        document.getElementById("latcoords").value = latcoords.lat();
+                        xlat.innerHTML = position.coords.latitude;
+                        xlong.innerHTML = position.coords.longitude;
                      }
                      </script>
                
