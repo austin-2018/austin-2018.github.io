@@ -56,9 +56,9 @@
 
                <button class="btn btn-primary btn-lg" onclick="getLocation()">Get Location</button>
 
-               <div id="demo"></div>
+               <div id="demo"></div><br />
                <div>
-                  <p>Send in the Information</p>
+                  <h3>Send in the Information</h3>
                   <form>
                        Latitude:<br>
                        <input type="text" id="latcoords" name="latcoords"><br>
@@ -88,13 +88,11 @@
                         
                         document.getElementById("latcoords").value = position.coords.latitude;
                         document.getElementById("longcoords").value = position.coords.longitude;
-                        ///document.getElementById("longcoords").value = longcoords.lng();
                      }
                      </script>
                
                  </div><!-- col md 4 -->       
               <div class="col-md-8">
-                   <div style="text-align:center;display:none;"><img src="images/video.png" alt=""></div>
                    <div class="video-header">
                       <h1>Find My Family</h1>   
                    </div>
