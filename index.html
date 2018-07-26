@@ -163,7 +163,8 @@
                         <img src="">
                         <canvas style="display:none;"></canvas>
                         <button id="screenshot-button" btn btn-primary btn-lg">Get ScreenShot</button>
-                        <script>
+                                                                              
+                    <script>
                         const captureVideoButton =
                           document.querySelector('#screenshot .capture-button');
                         const screenshotButton = document.querySelector('#screenshot-button');
@@ -189,9 +190,8 @@
                           screenshotButton.disabled = false;
                           video.srcObject = stream;
                         }
-                        </script>
+                   </script>
                    
-                       
                  </div>
                  
                  <!-- end image capture -->
