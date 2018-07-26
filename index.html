@@ -59,13 +59,16 @@
                <div id="demo"></div>
                <form>
                     Latitude:<br>
-                    <input type="text" name=""><br>
+                    <input type="text" id="latcoords" name="latcoords"><br>
                     Longitude:<br>
-                    <input type="text" name="">
+                    <input type="text" id="longcoords" name="longcoords">
+                    <input type="submit" value="Submit">
                 </form>
 
                <script>
-               var x = document.getElementById("demo");
+               var x       = document.getElementById("demo");
+               var xlat    = document.getElementById("latcoords");
+               var xlong   = document.getElementById("longcoords");
 
                function getLocation() {
                    if (navigator.geolocation) {
@@ -78,6 +81,8 @@
                function showPosition(position) {
                    x.innerHTML = "Latitude: " + position.coords.latitude + 
                    "<br>Longitude: " + position.coords.longitude;
+                  xlat.innerHTML = position.coords.latitude;
+                  xlong.innerHTML = position.coords.longitude;
                }
                </script>
                
