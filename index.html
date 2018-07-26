@@ -125,6 +125,20 @@
                            } else {
                              alert('getUserMedia() is not supported by your browser');
                            }
+                    </script> 
+                       <video autoplay></video>
+                      <!-- only video  To use both the microphone and camera, pass {video: true, audio: true}: -->
+
+                           <script>
+                           const constraints = {
+                             video: true
+                           };
+
+                           const video = document.querySelector('video');
+
+                           navigator.mediaDevices.getUserMedia(constraints).
+                             then((stream) => {video.srcObject = stream});
+                           </script>
                        
                     </script>   
                  
