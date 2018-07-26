@@ -57,23 +57,38 @@
                <button class="btn btn-primary btn-lg" onclick="getLocation()">Get Location</button>
 
                <div id="demo"></div>
+               <div>
+                  <p>Send in the Information</p>
+                  <form>
+                       Latitude:<br>
+                       <input type="text" id="latcoords" name="latcoords"><br>
+                       Longitude:<br>
+                       <input type="text" id="longcoords" name="longcoords"><br>
+                     <button class="btn btn-primary btn-lg" value="Submit">Submit</button>
+                   </form>
+               </div>
+                     <script>
+                     var x       = document.getElementById("demo"),
+                         xlat    = document.getElementById("latcoords"),
+                         xlong   = document.getElementById("longcoords");
+                        
+                     function getLocation() {
+                         if (navigator.geolocation) {
+                             navigator.geolocation.getCurrentPosition(showPosition);
+                         } else { 
+                             x.innerHTML = "Geolocation is not supported by this browser.";
+                         }
+                     }
 
-               <script>
-               var x = document.getElementById("demo");
-
-               function getLocation() {
-                   if (navigator.geolocation) {
-                       navigator.geolocation.getCurrentPosition(showPosition);
-                   } else { 
-                       x.innerHTML = "Geolocation is not supported by this browser.";
-                   }
-               }
-
-               function showPosition(position) {
-                   x.innerHTML = "Latitude: " + position.coords.latitude + 
-                   "<br>Longitude: " + position.coords.longitude;
-               }
-               </script>
+                     function showPosition(position) {
+                         x.innerHTML = "Latitude: " + position.coords.latitude + 
+                         "<br>Longitude: " + position.coords.longitude;
+                        
+                        document.getElementById("latcoords").value = position.coords.latitude;
+                        document.getElementById("longcoords").value = position.coords.longitude;
+                        ///document.getElementById("longcoords").value = longcoords.lng();
+                     }
+                     </script>
                
                  </div><!-- col md 4 -->       
               <div class="col-md-8">
