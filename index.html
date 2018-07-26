@@ -135,10 +135,8 @@
 
                            navigator.mediaDevices.getUserMedia(constraints).
                              then((stream) => {video.srcObject = stream});
-                    </script>
-                    <!-- next block -->
-                    <script>
-                    const hdConstraints = {
+
+                          const hdConstraints = {
                              video: {width: {min: 1280}, height: {min: 720}}
                            };
 
@@ -160,12 +158,11 @@
                         <canvas style="display:none;"></canvas>
                       
 
-                        <button class="capture-button btn btn-primary btn-lg">Capture video</button>
+                        <button class="capture-button">Capture video</button>
       
-                        <button id="screenshot-button" class="btn btn-primary btn-lg">Get ScreenShot</button>
+                        <button id="screenshot-button">Get ScreenShot</button>
                     
                  </div> 
-                 
                  
                  
                  
