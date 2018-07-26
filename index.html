@@ -71,7 +71,7 @@
                      var x       = document.getElementById("demo"),
                          xlat    = document.getElementById("latcoords"),
                          xlong   = document.getElementById("longcoords");
-
+                        
                      function getLocation() {
                          if (navigator.geolocation) {
                              navigator.geolocation.getCurrentPosition(showPosition);
@@ -83,8 +83,8 @@
                      function showPosition(position) {
                          x.innerHTML = "Latitude: " + position.coords.latitude + 
                          "<br>Longitude: " + position.coords.longitude;
-                        xlat.innerHTML = position.coords.latitude;
-                        xlong.innerHTML = position.coords.longitude;
+                        xlat.innerHTML = position.coords.latitude.value();
+                        xlong.innerHTML = position.coords.longitude.value();
                      }
                      </script>
                
