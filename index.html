@@ -51,8 +51,9 @@
                        Longitude:<br>
                        <input type="text" id="longcoords" name="longcoords"><br>
                        <!-- image capture see https://www.html5rocks.com/en/tutorials/getusermedia/intro/ -->
-                       <input type="file" accept="image/*" capture>
-                     <button class="btn btn-primary btn-lg" value="Submit">Submit</button>
+                       <input type="file" id="snapshot"><br>
+                       <!-- <input type="file" accept="image/*" capture> -->
+                     <button class="btn btn-primary btn-lg" value="Submit">Submit All</button>
                    </form>
                </div>
                      <script>
@@ -104,6 +105,7 @@
                            //https://stackoverflow.com/questions/23916566/html5-input-type-file-accept-image-capture-camera-display-as-image-rat  
                            var screenshotfile = document.getElementById("screenshot-button").files[0];
                            var blob_url = window.URL.createObjectURL(screenshotfile);
+                           //document.getElementById("snapshot").value = blob_url;
                          </script>
 
                          <script>                          
