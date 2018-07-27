@@ -131,12 +131,10 @@
                           <div id="screenshot" style="text-align:center;">
                           <video class="videostream" autoplay></video>
                           <img id="screenshot-img">
-                             <p>&nbsp;</p>
-                             <!-- <p><button class="capture-button">Capture video</button></p>  -->
-                           <p><button id="screenshot-button">Take screenshot</button></p>
-
-                             
-                        </div>
+                             <p>ScreenShot Eimage</p>
+                             <p><button class="capture-button">Capture video</button></p>
+                             <p><button id="screenshot-button">Take screenshot</button></p>   
+                        </div><!-- id screenshot -->
                          <script>
                             
                         const hdConstraints = {
@@ -180,12 +178,8 @@
                        screenshotButton.disabled = false;
                        video.srcObject = stream;
                      }
-
-                 
                  
                  </script>
-
-                 
 
                  <script>
                     const videoElement = document.querySelector('video');
