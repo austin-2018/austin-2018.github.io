@@ -126,34 +126,21 @@
                            }
                           </script>
                           <video autoplay></video>
-                    
-                           <script>
-                           const constraints = {
-                             video: true
-                           };
 
-                           const video = document.querySelector('video');
+                         <script>
+                        const hdConstraints = {
+                          video: {width: {min: 1280}, height: {min: 720}}
+                        };
+                        navigator.mediaDevices.getUserMedia(hdConstraints).
+                          then((stream) => {video.srcObject = stream});
 
-                           navigator.mediaDevices.getUserMedia(constraints).
-                             then((stream) => {video.srcObject = stream});
-                           </script>
-                   
-                           <script>  
-
-                          const hdConstraints = {
-                             video: {width: {min: 1280}, height: {min: 720}}
-                           };
-
-                           navigator.mediaDevices.getUserMedia(hdConstraints).
-                             then((stream) => {video.srcObject = stream});
-
-                           const vgaConstraints = {
-                             video: {width: {exact: 640}, height: {exact: 480}}
-                           };
-
-                           navigator.mediaDevices.getUserMedia(vgaConstraints).
-                             then((stream) => {video.srcObject = stream});             
-                 </script>
+                       const vgaConstraints = {
+                          video: {width: {exact: 640}, height: {exact: 480}}
+                        };
+                        navigator.mediaDevices.getUserMedia(vgaConstraints).
+                          then((stream) => {video.srcObject = stream}); 
+                            
+                       </script>
                  <script>
                       const captureVideoButton =
                        document.querySelector('#screenshot .capture-button');
