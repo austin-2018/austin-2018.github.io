@@ -125,9 +125,14 @@
                              alert('getUserMedia() is not supported by your browser');
                            }
                           </script>
-                          <video autoplay></video>
-
+                          <div id="screenshot" style="text-align:center;">
+                          <video class="videostream" autoplay></video>
+                          <img id="screenshot-img">
+                          <p><button class="capture-button">Capture video</button>
+                          <p><button id="screenshot-button" disabled>Take screenshot</button></p>
+                        </div>
                          <script>
+                            
                         const hdConstraints = {
                           video: {width: {min: 1280}, height: {min: 720}}
                         };
@@ -141,7 +146,8 @@
                           then((stream) => {video.srcObject = stream}); 
                             
                        </script>
-                 <script>
+                 
+                       <script>
                       const captureVideoButton =
                        document.querySelector('#screenshot .capture-button');
                      const screenshotButton = document.querySelector('#screenshot-button');
@@ -171,12 +177,7 @@
                  
                  
                  </script>
-                        <div id="screenshot" style="text-align:center;">
-                          <video class="videostream" autoplay></video>
-                          <img id="screenshot-img">
-                          <p><button class="capture-button">Capture video</button>
-                          <p><button id="screenshot-button" disabled>Take screenshot</button></p>
-                        </div>
+
                  
                   
 
