@@ -22,25 +22,7 @@
   <title>Proof of Concept | Find My Family</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta charset="UTF-8">
-<!-- firebase authentication is REQUIRED to make the STUN SERVEER video to work, but not for getUserMedia work -->   
-<!-- firebase authentication -->
-<!-- Firebase App is always required and must be first -->
-   <!--
-<script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-app.js"></script>
-    -->
 
-<!-- Add additional services you want to use -->
-   <!--
-<script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-auth.js"></script>
-<script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-database.js"></script>
-<script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-firestore.js"></script>
-<script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-messaging.js"></script>
-<script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-functions.js"></script>
--->
-<!-- Comment out (or don't include) services you don't want to use -->
-<!-- <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-storage.js"></script> -->
-  <!-- end firebase authentication -->
- 
   <link rel="stylesheet" href="css/main.css">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
  </head>
@@ -50,7 +32,7 @@
        <div class="container">
           
             <div class="col-md-4">
-            <!-- source code https://www.w3schools.com/htmL/tryit.asp?filename=tryhtml5_geolocation --> 
+                 <!-- source code https://www.w3schools.com/htmL/tryit.asp?filename=tryhtml5_geolocation --> 
                  <div id="map">
                         <iframe id="google_map" src="https://maps.google.co.uk/?output=embed"></iframe>
                   </div><!-- map -->
@@ -95,27 +77,8 @@
                      </script>
                
               </div><!-- col md 4 -->       
-              <div class="col-md-8">
-
-                 <!-- first set of videos, which use the STUN and TURN server -->
-                 <!--
-                   <div class="video-header">
-                      <h1>Connect With Me!</h1>   
-                   </div>
-               
-                   <div>
-                      <video id="yourVideo" autoplay muted playsinline class="video1"></video>
-                      <video id="friendsVideo" autoplay playsinline class="video2"></video>
-                   </div>   
-                   <div>
-               
-                   <button onclick="showFriendsFace()" type="button" class="btn btn-primary btn-lg"><span class="glyphicon glyphicon-facetime-video" aria-hidden="true"></span> Call</button>
-                   </div> -->
-                 <!-- end first set of videos, which use the STUN and TURN server -->
+              <div class="col-md-8">               
                  
-                 
-                 <!-- Second set of videos for image capture -->
-
                         <script>
                            function hasGetUserMedia() {
                              return !!(navigator.mediaDevices &&
@@ -131,9 +94,9 @@
                           <div id="screenshot" style="text-align:center;">
                           <video class="videostream" autoplay></video>
                           <img id="screenshot-img">
-                             <p>ScreenShot Eimage</p>
-                             <p><button class="capture-button">Capture video</button></p>
-                             <p><button id="screenshot-button">Take screenshot</button></p>   
+                             <p>ScreenShot Image</p>
+                             <p><button class="capture-button btn btn-primary btn-lg">Step One: Capture the Video</button></p>
+                             <p><button id="screenshot-button" class="btn btn-primary btn-lg">Step Two: Take a Screenshot</button></p>   
                         </div><!-- id screenshot -->
                          <script>
                             
