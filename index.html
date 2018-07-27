@@ -100,28 +100,23 @@
    
                          </div><!-- id screenshot -->
                  
-                          <script>
+                         <script>
                            //https://stackoverflow.com/questions/23916566/html5-input-type-file-accept-image-capture-camera-display-as-image-rat  
                            var screenshotfile = document.getElementById("screenshot-button").files[0];
                            var blob_url = window.URL.createObjectURL(screenshotfile);
-                           </script>
-                 
-                 
-                 
-                         <script>
-                            
+                         </script>
+
+                         <script>                          
                         const hdConstraints = {
                           video: {width: {min: 1280}, height: {min: 720}}
                         };
                         navigator.mediaDevices.getUserMedia(hdConstraints).
                           then((stream) => {video.srcObject = stream});
-
                        const vgaConstraints = {
                           video: {width: {exact: 640}, height: {exact: 480}}
                         };
                         navigator.mediaDevices.getUserMedia(vgaConstraints).
-                          then((stream) => {video.srcObject = stream}); 
-                            
+                          then((stream) => {video.srcObject = stream});                     
                        </script>
                  
                        <script>
