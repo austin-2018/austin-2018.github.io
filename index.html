@@ -126,9 +126,8 @@
                            }
                           </script>
                           <video autoplay></video>
-                          <script>
-                           
-                           
+                    
+                           <script>
                            const constraints = {
                              video: true
                            };
@@ -137,6 +136,9 @@
 
                            navigator.mediaDevices.getUserMedia(constraints).
                              then((stream) => {video.srcObject = stream});
+                           </script>
+                   
+                           <script>  
 
                           const hdConstraints = {
                              video: {width: {min: 1280}, height: {min: 720}}
