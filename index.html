@@ -22,18 +22,21 @@
   <title>Proof of Concept | Find My Family</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta charset="UTF-8">
-<!-- firebase authentication is REQUIRED to make the video work -->   
+<!-- firebase authentication is REQUIRED to make the STUN SERVEER video to work, but not for getUserMedia work -->   
 <!-- firebase authentication -->
 <!-- Firebase App is always required and must be first -->
+   <!--
 <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-app.js"></script>
+    -->
 
 <!-- Add additional services you want to use -->
+   <!--
 <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-auth.js"></script>
 <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-database.js"></script>
 <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-firestore.js"></script>
 <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-messaging.js"></script>
 <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-functions.js"></script>
-
+-->
 <!-- Comment out (or don't include) services you don't want to use -->
 <!-- <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-storage.js"></script> -->
   <!-- end firebase authentication -->
@@ -129,7 +132,7 @@
                           <video class="videostream" autoplay></video>
                           <img id="screenshot-img">
                              <p>&nbsp;</p>
-                             <p><button class="capture-button">Capture video</button></p>
+                             <!-- <p><button class="capture-button">Capture video</button></p>  -->
                            <p><button id="screenshot-button">Take screenshot</button></p>
 
                              
@@ -243,13 +246,7 @@
                           console.error('Error: ', error);
                         }
                  </script>   
-                 
-                 
-                 
-                 
-
-
-                 
+         
                  <!-- end image capture -->
                    
                 </div><!-- col-md  8 -->
