@@ -1,19 +1,19 @@
-# austin-2018.github.io
+# CONNECT 
 
-### July 27, 2018: There are still hundreds of children still reunited to parents, because they are considered ineligible.   There's many reasons why some parents would be considered ineligible to be reunited with their children, but one of the reasons is that the parent has already been deported.
+### Find parents deported from the U.S., record their locations and photographs, to be put into a database so that children and caretakers can have a chance of re-unification.
 
-### This platform aims to provide an online meeting place and locater for the parent and child who still hope to find one another. 
+##### July 27, 2018: There are still hundreds of children still reunited to parents, because they are considered ineligible.   There's many reasons why some parents would be considered ineligible to be reunited with their children, but one of the reasons is that the parent has already been deported.  This platform aims to provide an online meeting place and locater for the parent and child who still hope to find one another. 
 
 
 
-### Sources Used to Complete this Platform
+### SOURCES and REFERENCES
 
-### Part One: Derivative code used from the following: 
+#### Part One: Derivative code used from the following: 
 
 ##### HTML5 Rocks | Capturing Audio and Video in HTML5 | https://www.html5rocks.com/en/tutorials/getusermedia/intro/ | Apache License 2.0
 ##### HTML5 Tutorials: Detect user's location with HTML Geolocation | https://www.youtube.com/watch?v=BqI54Snkw0s 
 
-### Part Two: References
+#### Part Two: References
 
 ##### Google Developrs| Geolocation on HTTPS |https://developers.google.com/web/updates/2016/04/geolocation-on-secure-contexts-only
 ##### Google Maps Platform | Maps JavaScript API | https://developers.google.com/maps/documentation/javascript/tutorial
