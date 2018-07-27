@@ -14,7 +14,7 @@
 ##### HTML5 Tutorials: Detect user's location with HTML Geolocation | https://www.youtube.com/watch?v=BqI54Snkw0s 
 
 #### Part Two: References
-
+##### Blog | TeamTreeHouse | Filereader API | http://blog.teamtreehouse.com/reading-files-using-the-html5-filereader-api
 ##### Google Developrs| Geolocation on HTTPS |https://developers.google.com/web/updates/2016/04/geolocation-on-secure-contexts-only
 ##### Google Maps Platform | Maps JavaScript API | https://developers.google.com/maps/documentation/javascript/tutorial
 ##### HTML5 Rocks | Capturing Audio and Video in HTML5 | https://www.html5rocks.com/en/tutorials/getusermedia/intro/
