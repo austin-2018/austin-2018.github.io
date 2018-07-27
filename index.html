@@ -37,15 +37,17 @@
                  <div id="map">
                         <iframe id="google_map" src="https://maps.google.co.uk/?output=embed"></iframe>
                   </div><!-- map -->
-
-               <p>Click the button to get your coordinates.</p>
+               
+               <h3>Step One. Get Your Location</h3>
+               <h4>Click the button to get your coordinates.</h4>
+               <p>The location probably won't appear immediately; give it a second or two.</p>
+               <p>When the location appears below, it should also automatically load in the form</p>
 
                <button class="btn btn-primary btn-lg" onclick="getLocation()">Get Location</button>
 
                <div id="demo"></div><br />
                <div>
-                  <h3>Send in the Information</h3>
-                  <!--
+                   <!--
                   <form>
                        Latitude:<br>
                        <input type="text" id="latcoords" name="latcoords"><br>
@@ -92,6 +94,7 @@
                              alert('getUserMedia() is not supported by your browser');
                            }
                           </script>
+                       <form>
                           <div id="screenshot" style="text-align:center;">
                           <video class="videostream" autoplay></video>
                           <img id="screenshot-img"><br>
@@ -106,7 +109,7 @@
                           
                              <button class="capture-button btn btn-primary btn-lg">Step One: Capture the Video</button><br>
                              <button id="screenshot-button" class="btn btn-primary btn-lg">Step Two: Take a Screenshot</button><br>   
-   
+                          </form>
                          </div><!-- id screenshot -->
                  
                          <script>
