@@ -24,7 +24,6 @@
   <meta charset="UTF-8">
 
   <link rel="stylesheet" href="css/main.css">
-  <link rel="stylesheet" href="css/screenshot.css">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
  </head>
   <body onload="showMyFace()">
@@ -37,26 +36,23 @@
                  <div id="map">
                         <iframe id="google_map" src="https://maps.google.co.uk/?output=embed"></iframe>
                   </div><!-- map -->
-               
-               <h3>Step One. Get Your Location</h3>
-               <h4>Click the "Step One: Get Location" button below to get your location coordinates.</h4>
-               <p>The location probably won't appear immediately; give it a second or two.
-               When the location appears below, it should automatically load in the form.</p>
 
-               <button class="btn btn-primary btn-lg" onclick="getLocation()">Step One: Get Location</button>
+               <p>Click the button to get your coordinates.</p>
+
+               <button class="btn btn-primary btn-lg" onclick="getLocation()">Get Location</button>
 
                <div id="demo"></div><br />
                <div>
-                   <!--
+                  <h3>Send in the Information</h3>
                   <form>
                        Latitude:<br>
                        <input type="text" id="latcoords" name="latcoords"><br>
                        Longitude:<br>
                        <input type="text" id="longcoords" name="longcoords"><br>
                        <!-- image capture see https://www.html5rocks.com/en/tutorials/getusermedia/intro/ -->
-                       <!-- <input type="file" accept="image/*" capture> -->
-                     <!-- <button class="btn btn-primary btn-lg" value="Submit">Submit Location</button>
-                   </form> -->
+                       <input type="file" accept="image/*;capture=camera"><br >
+                     <button class="btn btn-primary btn-lg" value="Submit">Submit</button>
+                   </form>
                </div>
                      <script>
                      var x       = document.getElementById("demo"),
@@ -78,8 +74,8 @@
                         document.getElementById("latcoords").value = position.coords.latitude;
                         document.getElementById("longcoords").value = position.coords.longitude;
                      }
-                     </script>        
-                
+                     </script>
+               
               </div><!-- col md 4 -->       
               <div class="col-md-8">               
                  
@@ -88,48 +84,36 @@
                              return !!(navigator.mediaDevices &&
                                navigator.mediaDevices.getUserMedia);
                            }
+
                            if (hasGetUserMedia()) {
                              // Good to go!
                            } else {
                              alert('getUserMedia() is not supported by your browser');
                            }
                           </script>
-                       <form>
                           <div id="screenshot" style="text-align:center;">
                           <video class="videostream" autoplay></video>
-                          <img id="screenshot-img"><br>
-                            
-                                  Latitude:<br>
-                       <input type="text" id="latcoords" name="latcoords"><br>
-                       Longitude:<br>
-                       <input type="text" id="longcoords" name="longcoords"><br>
-                       <!-- image capture see https://www.html5rocks.com/en/tutorials/getusermedia/intro/ -->
-                       <!-- <input type="file" accept="image/*" capture> -->
-                          
-                             <button class="capture-button btn btn-primary btn-lg">Step Two: Capture the Video</button><br>
-                             <button id="screenshot-button" class="btn btn-primary btn-lg">Step Three: Take a Screenshot</button><br>   
-                          </form>
-                         </div><!-- id screenshot -->
-                 
+                          <img id="screenshot-img">
+                             <p>ScreenShot Image</p>
+                             <p><button class="capture-button btn btn-primary btn-lg">Step One: Capture the Video</button></p>
+                             <p><button id="screenshot-button" class="btn btn-primary btn-lg">Step Two: Take a Screenshot</button></p>   
+                        </div><!-- id screenshot -->
                          <script>
-                           //https://stackoverflow.com/questions/23916566/html5-input-type-file-accept-image-capture-camera-display-as-image-rat  
-                           var screenshotfile = document.getElementById("screenshot-img").files[0];
-                           var blob_url = window.URL.createObjectURL(screenshotfile);
-                           //document.getElementById("snapshot").value = blob_url;
-                         </script>
-
-                         <script>                          
+                            
                         const hdConstraints = {
                           video: {width: {min: 1280}, height: {min: 720}}
                         };
                         navigator.mediaDevices.getUserMedia(hdConstraints).
                           then((stream) => {video.srcObject = stream});
+
                        const vgaConstraints = {
                           video: {width: {exact: 640}, height: {exact: 480}}
                         };
                         navigator.mediaDevices.getUserMedia(vgaConstraints).
-                          then((stream) => {video.srcObject = stream});                     
+                          then((stream) => {video.srcObject = stream}); 
+                            
                        </script>
+
                  
                        <script>
                       const captureVideoButton =
@@ -151,15 +135,13 @@
                        canvas.getContext('2d').drawImage(video, 0, 0);
                        // Other browsers will fall back to image/png
                        img.src = canvas.toDataURL('image/webp');
-                        //
-                       toBeSent = img.src;
-                        //
                      };
 
                      function handleSuccess(stream) {
                        screenshotButton.disabled = false;
                        video.srcObject = stream;
                      }
+                 
                  </script>
 
                  <script>
@@ -222,7 +204,7 @@
                         }
                  </script>   
          
-                 <!-- end video and image capture section-->
+                 <!-- end image capture -->
                    
                 </div><!-- col-md  8 -->
             </div><!-- container -->  
