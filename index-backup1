@@ -22,23 +22,9 @@
   <title>Proof of Concept | Find My Family</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta charset="UTF-8">
-<!-- firebase authentication is REQUIRED to make the video work -->   
-<!-- firebase authentication -->
-<!-- Firebase App is always required and must be first -->
-<script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-app.js"></script>
 
-<!-- Add additional services you want to use -->
-<script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-auth.js"></script>
-<script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-database.js"></script>
-<script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-firestore.js"></script>
-<script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-messaging.js"></script>
-<script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-functions.js"></script>
-
-<!-- Comment out (or don't include) services you don't want to use -->
-<!-- <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-storage.js"></script> -->
-  <!-- end firebase authentication -->
- 
   <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/screenshot.css">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
  </head>
   <body onload="showMyFace()">
@@ -47,7 +33,7 @@
        <div class="container">
           
             <div class="col-md-4">
-            <!-- source code https://www.w3schools.com/htmL/tryit.asp?filename=tryhtml5_geolocation --> 
+                 <!-- source code https://www.w3schools.com/htmL/tryit.asp?filename=tryhtml5_geolocation --> 
                  <div id="map">
                         <iframe id="google_map" src="https://maps.google.co.uk/?output=embed"></iframe>
                   </div><!-- map -->
@@ -56,14 +42,16 @@
 
                <button class="btn btn-primary btn-lg" onclick="getLocation()">Get Location</button>
 
-               <div id="demo"></div>
+               <div id="demo"></div><br />
                <div>
-                  <p>Send in the Information</p>
+                  <h3>Send in the Information</h3>
                   <form>
                        Latitude:<br>
                        <input type="text" id="latcoords" name="latcoords"><br>
                        Longitude:<br>
                        <input type="text" id="longcoords" name="longcoords"><br>
+                       <!-- image capture see https://www.html5rocks.com/en/tutorials/getusermedia/intro/ -->
+                       <input type="file" accept="image/*;capture=camera"><br />
                      <button class="btn btn-primary btn-lg" value="Submit">Submit</button>
                    </form>
                </div>
@@ -86,31 +74,141 @@
                         
                         document.getElementById("latcoords").value = position.coords.latitude;
                         document.getElementById("longcoords").value = position.coords.longitude;
-                        ///document.getElementById("longcoords").value = longcoords.lng();
                      }
                      </script>
                
-                 </div><!-- col md 4 -->       
-              <div class="col-md-8">
-                   <div style="text-align:center;display:none;"><img src="images/video.png" alt=""></div>
-                   <div class="video-header">
-                      <h1>Find My Family</h1>   
-                   </div>
-               
-                   <div><!-- wrapper for videos -->
-                      <video id="yourVideo" autoplay muted playsinline></video>
-                      <video id="friendsVideo" autoplay playsinline></video>
-                   </div>   
-                   <div>
-                  <!-- IMPORTANT REMBER TO CHANGE ID ON BUTTON -->
-                   <button onclick="showFriendsFace()" type="button" class="btn btn-primary btn-lg"><span class="glyphicon glyphicon-facetime-video" aria-hidden="true"></span> Call</button>
-                   </div>   
-                   <script src="js/script.js"></script>
-                   <!-- <script async defer src="js/geolocate.js"></script>  -->
+              </div><!-- col md 4 -->       
+              <div class="col-md-8">               
+                 
+                        <script>
+                           function hasGetUserMedia() {
+                             return !!(navigator.mediaDevices &&
+                               navigator.mediaDevices.getUserMedia);
+                           }
+
+                           if (hasGetUserMedia()) {
+                             // Good to go!
+                           } else {
+                             alert('getUserMedia() is not supported by your browser');
+                           }
+                          </script>
+                          <div id="screenshot" style="text-align:center;">
+                          <video class="videostream" autoplay></video>
+                          <img id="screenshot-img"><br>  
+                             <button class="capture-button btn btn-primary btn-lg">Step One: Capture the Video</button><br>
+                             <button id="screenshot-button" class="btn btn-primary btn-lg">Step Two: Take a Screenshot</button><br>   
+                                
+                         </div><!-- id screenshot -->
+                         <script>
+                            
+                        const hdConstraints = {
+                          video: {width: {min: 1280}, height: {min: 720}}
+                        };
+                        navigator.mediaDevices.getUserMedia(hdConstraints).
+                          then((stream) => {video.srcObject = stream});
+
+                       const vgaConstraints = {
+                          video: {width: {exact: 640}, height: {exact: 480}}
+                        };
+                        navigator.mediaDevices.getUserMedia(vgaConstraints).
+                          then((stream) => {video.srcObject = stream}); 
+                            
+                       </script>
+                 
+                       <script>
+                      const captureVideoButton =
+                       document.querySelector('#screenshot .capture-button');
+                     const screenshotButton = document.querySelector('#screenshot-button');
+                     const img = document.querySelector('#screenshot img');
+                     const video = document.querySelector('#screenshot video');
+
+                     const canvas = document.createElement('canvas');
+
+                     captureVideoButton.onclick = function() {
+                       navigator.mediaDevices.getUserMedia(constraints).
+                         then(handleSuccess).catch(handleError);
+                     };
+
+                     screenshotButton.onclick = video.onclick = function() {
+                       canvas.width = video.videoWidth;
+                       canvas.height = video.videoHeight;
+                       canvas.getContext('2d').drawImage(video, 0, 0);
+                       // Other browsers will fall back to image/png
+                       img.src = canvas.toDataURL('image/webp');
+                     };
+
+                     function handleSuccess(stream) {
+                       screenshotButton.disabled = false;
+                       video.srcObject = stream;
+                     }
+                 </script>
+
+                 <script>
+                    const videoElement = document.querySelector('video');
+                           const audioSelect = document.querySelector('select#audioSource');
+                           const videoSelect = document.querySelector('select#videoSource');
+
+                           navigator.mediaDevices.enumerateDevices()
+                             .then(gotDevices).then(getStream).catch(handleError);
+
+                           audioSelect.onchange = getStream;
+                           videoSelect.onchange = getStream;
+
+                           function gotDevices(deviceInfos) {
+                             for (let i = 0; i !== deviceInfos.length; ++i) {
+                               const deviceInfo = deviceInfos[i];
+                               const option = document.createElement('option');
+                               option.value = deviceInfo.deviceId;
+                               if (deviceInfo.kind === 'audioinput') {
+                                 option.text = deviceInfo.label ||
+                                   'microphone ' + (audioSelect.length + 1);
+                                 audioSelect.appendChild(option);
+                               } else if (deviceInfo.kind === 'videoinput') {
+                                 option.text = deviceInfo.label || 'camera ' +
+                                   (videoSelect.length + 1);
+                                 videoSelect.appendChild(option);
+                               } else {
+                                 console.log('Found another kind of device: ', deviceInfo);
+                               }
+                             }
+                           }
+
+                        function getStream() {
+                          if (window.stream) {
+                            window.stream.getTracks().forEach(function(track) {
+                              track.stop();
+                            });
+                          }
+
+                          const constraints = {
+                            audio: {
+                              deviceId: {exact: audioSelect.value}
+                            },
+                            video: {
+                              deviceId: {exact: videoSelect.value}
+                            }
+                          };
+
+                          navigator.mediaDevices.getUserMedia(constraints).
+                            then(gotStream).catch(handleError);
+                        }
+
+                        function gotStream(stream) {
+                          window.stream = stream; // make stream available to console
+                          videoElement.srcObject = stream;
+                        }
+
+                        function handleError(error) {
+                          console.error('Error: ', error);
+                        }
+                 </script>   
+         
+                 <!-- end image capture -->
                    
                 </div><!-- col-md  8 -->
             </div><!-- container -->  
        </div><!-- row -->
-
+       <script src="js/script.js"></script>
+      <!-- <script async defer src="js/geolocate.js"></script>  -->
   </body> 
 </html>
