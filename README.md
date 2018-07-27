@@ -26,4 +26,9 @@
 ##### W3 | Media Capture | https://www.w3.org/TR/html-media-capture/
 ##### W3C Schools | Using HTML Geolocation | https://www.w3schools.com/htmL/tryit.asp?filename=tryhtml5_geolocation
 
+#### PENDING
+#### Reading files in JavaScript using the File APIs | https://www.html5rocks.com/en/tutorials/file/dndfiles/
+#### Capturing images from the camera in the browser using getUserMedia (with mirroring) | https://html5.by/blog/html5-image-capture-getusermedia-stream-api-mirror/
+#### view-source:https://html5.by/blog/demo/image-capture-getusermedia/
+
  
