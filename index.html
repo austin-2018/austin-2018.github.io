@@ -76,16 +76,7 @@
                         document.getElementById("latcoords").value = position.coords.latitude;
                         document.getElementById("longcoords").value = position.coords.longitude;
                      }
-                     </script>
-               
-               <div><!-- Blob URL -->
-               <input type="file" id="fileElem" multiple accept="image/*" style="display:none" onchange="handleFiles(this.files)">
-               <a href="#" id="fileSelect">Select some files</a> 
-               <div id="fileList">
-               <p>No files selected!</p>
-               </div>
-    
-         
+                     </script>        
                
               </div><!-- col md 4 -->       
               <div class="col-md-8">               
@@ -104,7 +95,8 @@
                           </script>
                           <div id="screenshot" style="text-align:center;">
                           <video class="videostream" autoplay></video>
-                          <img id="screenshot-img"><br>  
+                          <!-- <img id="screenshot-img"><br> -->
+                             <input id="screenshot-img"></br>   
                              <button class="capture-button btn btn-primary btn-lg">Step One: Capture the Video</button><br>
                              <button id="screenshot-button" class="btn btn-primary btn-lg">Step Two: Take a Screenshot</button><br>   
    
