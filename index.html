@@ -94,10 +94,10 @@
                           </script>
                           <div id="screenshot" style="text-align:center;">
                           <video class="videostream" autoplay></video>
-                         
-                             <button class="capture-button btn btn-primary btn-lg">Step One: Capture the Video</button>
+                          <img id="screenshot-img"><br />  
+                             <button class="capture-button btn btn-primary btn-lg">Step One: Capture the Video</button><br />
                              <button id="screenshot-button" class="btn btn-primary btn-lg">Step Two: Take a Screenshot</button>   
-                           <img id="screenshot-img">       
+                                
                          </div><!-- id screenshot -->
                          <script>
                             
@@ -121,7 +121,9 @@
                      const screenshotButton = document.querySelector('#screenshot-button');
                      const img = document.querySelector('#screenshot img');
                      const video = document.querySelector('#screenshot video');
-
+                      //    
+                     const imgToSend = document.querySelector('#screenshot img');
+                      //    
                      const canvas = document.createElement('canvas');
 
                      captureVideoButton.onclick = function() {
