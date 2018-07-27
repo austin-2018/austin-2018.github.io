@@ -8,12 +8,12 @@
 
 ### Sources Used to Complete this Platform
 
-#### Part One: Derivative code used from the following: 
+### Part One: Derivative code used from the following: 
 
 ##### HTML5 Rocks | Capturing Audio and Video in HTML5 | https://www.html5rocks.com/en/tutorials/getusermedia/intro/ | Apache License 2.0
 ##### HTML5 Tutorials: Detect user's location with HTML Geolocation | https://www.youtube.com/watch?v=BqI54Snkw0s 
 
-#### Part Two: References
+### Part Two: References
 
 ##### Google Developrs| Geolocation on HTTPS |https://developers.google.com/web/updates/2016/04/geolocation-on-secure-contexts-only
 ##### Google Maps Platform | Maps JavaScript API | https://developers.google.com/maps/documentation/javascript/tutorial
@@ -21,6 +21,7 @@
 ##### HTML5 Tutorials: Detect user's location with HTML Geolocation | https://www.youtube.com/watch?v=BqI54Snkw0s
 ##### MDN Web Docs | https://developer.mozilla.org/en-US/docs/Web/API/URL/createObjectURL
 ##### MDN Web Docs | Example | https://developer.mozilla.org/en-US/docs/Web/API/File/Using_files_from_web_applications#Example_Using_object_URLs_to_display_images
+##### Stack Overflow | https://stackoverflow.com/questions/16338937/html-media-capture-api-vs-getusermedia
 ##### Stack Overflow | https://stackoverflow.com/questions/23916566/html5-input-type-file-accept-image-capture-camera-display-as-image-rat
 ##### W3 | Media Capture | https://www.w3.org/TR/html-media-capture/
 ##### W3C Schools | Using HTML Geolocation | https://www.w3schools.com/htmL/tryit.asp?filename=tryhtml5_geolocation
