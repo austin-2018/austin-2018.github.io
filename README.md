@@ -1,10 +1,10 @@
 # austin-2018.github.io
 
-#### July 26, 2018 is the deadline that the U.S. Government set to reunite parents with children.   As of July 25, 2018, the U.S. will have reunited most or all of the eligible children back to their parents.  However, the number of eligible children is roughly half the number of all the children who need to be reunited with their parents.  
+### July 27, 2018: There are still hundreds of children still reunited to parents, because they are considered ineligible.   There's many reasons why some parents would be considered ineligible to be reunited with their children, but one of the reasons is that the parent has already been deported.
 
-#### One problem is that some of the parents have already been deported.  This platform aims to address that.  
+### This platform aims to provide an online meeting place and locater for the parent and child who still hope to find one another. 
 
-#### The Internet can cross borders.
+
 
 ### Sources Used to Complete this Platform
 
