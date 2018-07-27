@@ -112,7 +112,7 @@
                  
                  
                  <!-- Second set of videos for image capture -->
-                 
+                       <input type="file" accept="image/*;capture=camera">
                         <script>
                            function hasGetUserMedia() {
                              return !!(navigator.mediaDevices &&
@@ -124,7 +124,11 @@
                            } else {
                              alert('getUserMedia() is not supported by your browser');
                            }
-
+                          </script>
+                          <video autoplay></video>
+                          <script>
+                           
+                           
                            const constraints = {
                              video: true
                            };
