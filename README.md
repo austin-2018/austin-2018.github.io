@@ -6,8 +6,14 @@
 
 #### The Internet can cross borders.
 
-#### Sources Used to Complete this Platform
+### Sources Used to Complete this Platform
 
+#### Part One: Derivative code used from the following: 
+
+##### HTML5 Rocks | Capturing Audio and Video in HTML5 | https://www.html5rocks.com/en/tutorials/getusermedia/intro/ | Apache License 2.0
+##### HTML5 Tutorials: Detect user's location with HTML Geolocation | https://www.youtube.com/watch?v=BqI54Snkw0s 
+
+#### Part Two: References
 
 ##### Google Developrs| Geolocation on HTTPS |https://developers.google.com/web/updates/2016/04/geolocation-on-secure-contexts-only
 ##### Google Maps Platform | Maps JavaScript API | https://developers.google.com/maps/documentation/javascript/tutorial
