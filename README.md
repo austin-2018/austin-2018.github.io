@@ -18,6 +18,7 @@
 #### Capturing images from the camera in the browser using getUserMedia (with mirroring) | https://html5.by/blog/html5-image-capture-getusermedia-stream-api-mirror/
 ##### Google Developrs| Geolocation on HTTPS |https://developers.google.com/web/updates/2016/04/geolocation-on-secure-contexts-only
 ##### Google Maps Platform | Maps JavaScript API | https://developers.google.com/maps/documentation/javascript/tutorial
+##### Gorigins | http://gorigins.com/posting-a-canvas-image-to-facebook-and-twitter/
 ##### HTML5 Rocks | Capturing Audio and Video in HTML5 | https://www.html5rocks.com/en/tutorials/getusermedia/intro/
 ##### HTML5 Tutorials: Detect user's location with HTML Geolocation | https://www.youtube.com/watch?v=BqI54Snkw0s
 ##### MDN Web Docs | https://developer.mozilla.org/en-US/docs/Web/API/URL/createObjectURL
@@ -27,6 +28,7 @@
 ##### Stack Overflow | https://stackoverflow.com/questions/23916566/html5-input-type-file-accept-image-capture-camera-display-as-image-rat
 ##### W3 | Media Capture | https://www.w3.org/TR/html-media-capture/
 ##### W3C Schools | Using HTML Geolocation | https://www.w3schools.com/htmL/tryit.asp?filename=tryhtml5_geolocation
+##### W3 | Capture Element | https://www.w3.org/TR/html-media-capture/
 
 #### SUPPLEMENTAL
 
@@ -35,6 +37,6 @@
 #### PENDING
 
 
-#### http://gorigins.com/posting-a-canvas-image-to-facebook-and-twitter/
+
 
  
