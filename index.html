@@ -78,8 +78,7 @@
                      </script>
                     <div>
                      <form>
-                        <img id="screenshot-img">
-                        <!-- <img id="screenshot-img2"> -->
+                        <img id="screenshot-img2">
                         <button class="btn btn-primary btn-lg" value="Submit">Send Snapshot</button>
                      </form>   
                     </div>
@@ -99,7 +98,7 @@
                           </script>
                           <div id="screenshot" style="text-align:center;">
                           <video class="videostream" autoplay></video>
-                          <!-- <img id="screenshot-img"> -->
+                          <img id="screenshot-img" style="display:none;">
 
                              <p><button class="capture-button btn btn-primary btn-lg">Step One: Capture the Video</button></p>
                              <p><button id="screenshot-button" class="btn btn-primary btn-lg">Step Two: Take a Screenshot</button></p>   
@@ -125,7 +124,7 @@
                        document.querySelector('#screenshot .capture-button');
                      const screenshotButton = document.querySelector('#screenshot-button');
                      const img = document.querySelector('#screenshot img');
-                     //const img2 = document.querySelector('#screenshot-img2');
+                     const img2 = document.querySelector('#screenshot-img2');
                      const video = document.querySelector('#screenshot video');
                      const canvas = document.createElement('canvas');
 
@@ -140,7 +139,7 @@
                        canvas.getContext('2d').drawImage(video, 0, 0);
                        // Other browsers will fall back to image/png
                        img.src = canvas.toDataURL('image/webp');       
-                       //img2.src = canvas.toDataURL('image/webp'); 
+                       img2.src = canvas.toDataURL('image/webp'); 
                      };
 
                      function handleSuccess(stream) {
