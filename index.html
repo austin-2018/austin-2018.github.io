@@ -51,8 +51,8 @@
                        Longitude:<br>
                        <input type="text" id="longcoords" name="longcoords"><br>
                        <!-- image capture see https://www.html5rocks.com/en/tutorials/getusermedia/intro/ -->
-                       <input type="file" accept="image/*;capture=camera"><br >
-                     <button class="btn btn-primary btn-lg" value="Submit">Submit</button>
+                       <!-- <input type="file" accept="image/*;capture=camera"><br > -->
+                     <button class="btn btn-primary btn-lg" value="Submit">Send Location</button>
                    </form>
                </div>
                      <script>
@@ -76,9 +76,12 @@
                         document.getElementById("longcoords").value = position.coords.longitude;
                      }
                      </script>
-               !!//////
-               <img id="screenshot-img2">
-               !!/////
+                    <div>
+                     <form>  
+                        <img id="screenshot-img2"><br>
+                        <button class="btn btn-primary btn-lg" value="Submit">Send Snapshot</button>
+                     </form>   
+                    </div>
               </div><!-- col md 4 -->       
               <div class="col-md-8">               
                  
