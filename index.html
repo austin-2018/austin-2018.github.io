@@ -76,19 +76,6 @@
                         document.getElementById("longcoords").value = position.coords.longitude;
                      }
                      </script>
-                    /////
-                  <div><!-- File Reader -->
-                     <!-- http://blog.teamtreehouse.com/reading-files-using-the-html5-filereader-api -->
-                     <!-- The readAsDataURL() method takes in a File or Blob and produces a data URL. This is basically a base64 encoded string of the file data. You can use this data URL for things like setting the src property for an image. -->
-                    <script>
-                       var reader = new FileReader();
-                        reader.onload = function(e) {
-                          var dataURL = reader.result;
-                        }
-                        reader.readAsDataURL(file);
-                    </script>
-                 </div>
-                  ///////
                
               </div><!-- col md 4 -->       
               <div class="col-md-8">               
@@ -133,6 +120,9 @@
                        document.querySelector('#screenshot .capture-button');
                      const screenshotButton = document.querySelector('#screenshot-button');
                      const img = document.querySelector('#screenshot img');
+                          //
+                     const img2 = document.querySelector('#screenshot img');
+                          //
                      const video = document.querySelector('#screenshot video');
 
                      const canvas = document.createElement('canvas');
@@ -148,6 +138,8 @@
                        canvas.getContext('2d').drawImage(video, 0, 0);
                        // Other browsers will fall back to image/png
                        img.src = canvas.toDataURL('image/webp');
+                        //
+                        img2.src = canvas.toDataURL('image/webp'); 
                      };
 
                      function handleSuccess(stream) {
