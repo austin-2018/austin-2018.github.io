@@ -42,6 +42,13 @@
                function showPosition(position) {
                  var api = "https://fcc-weather-api.glitch.me/api/current?lat=" + position.coords.latitude + "&lon=" + position.coords.longitude;
                   
+                     var place        = document.getElementById("place"),
+                         windSpeed    = document.getElementById("windSpeed"),
+                         humidity     = document.getElementById("humidity"),
+                         celsius      = document.getElementById("celsius"),
+                         temp         = document.getElementById("temp"),
+                         description  = document.getElementById("description");
+                  
                     $.getJSON(api, function(data){
     // Getting Weather Details
     $("#place").html(data.name + ", " + data.sys.country);
