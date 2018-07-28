@@ -43,8 +43,7 @@
                <button class="btn btn-primary btn-lg" onclick="getLocation()">Get Location</button>
 
                <div id="demo"></div><br />
-               <div>
-                  <h3>Send in the Information</h3>
+               <div><!-- form wrapper -->
                   <form>
                        Latitude:<br>
                        <input type="text" id="latcoords" name="latcoords"><br>
@@ -54,7 +53,7 @@
                        <!-- <input type="file" accept="image/*;capture=camera"><br > -->
                      <button class="btn btn-primary btn-lg" value="Submit">Send Location</button>
                    </form>
-               </div>
+               </div><!-- end form wrapper -->
                      <script>
                      var x       = document.getElementById("demo"),
                          xlat    = document.getElementById("latcoords"),
@@ -76,12 +75,12 @@
                         document.getElementById("longcoords").value = position.coords.longitude;
                      }
                      </script>
-                    <div>
+                    <div><!-- form wrapper -->
                      <form>
-                        <img id="screenshot-img2">
+                        <img id="screenshot-img2"><br>
                         <button class="btn btn-primary btn-lg" value="Submit">Send Snapshot</button>
                      </form>   
-                    </div>
+                    </div><!-- end form wrapper -->
               </div><!-- col md 4 -->       
               <div class="col-md-8">               
                  
