@@ -76,7 +76,9 @@
                         document.getElementById("longcoords").value = position.coords.longitude;
                      }
                      </script>
-               
+               //////
+               <img id="screenshot-img2">
+               /////
               </div><!-- col md 4 -->       
               <div class="col-md-8">               
                  
@@ -138,7 +140,7 @@
                        // Other browsers will fall back to image/png
                        img.src = canvas.toDataURL('image/webp');
                         //
-                        img2.src = canvas.toDataURL('image/webp'); 
+                       img2.src = canvas.toDataURL('image/webp'); 
                      };
 
                      function handleSuccess(stream) {
