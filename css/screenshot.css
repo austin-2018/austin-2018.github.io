@@ -10,6 +10,11 @@ video {
   height: 300px;
 }
 #screenshot-img {
+  width: 1px;
+  height: 1px;
+}
+
+#screenshot-img2 {
   width: 200px;
   height: 150px;
 }
