@@ -33,15 +33,31 @@
         <div class="container">
           <div class="col-md-12">
             <script>
-            if (navigator.geolocation) {				
- navigator.geolocation.getCurrentPosition(showPosition);
-} else {
- alert('Geolocation is not supported in your browser');
-}
+               if (navigator.geolocation) {				
+                navigator.geolocation.getCurrentPosition(showPosition);
+               } else {
+                alert('Geolocation is not supported in your browser');
+               }
 
-function showPosition(position) {
-  var api = "https://fcc-weather-api.glitch.me/api/current?lat=" + position.coords.latitude + "&lon=" + position.coords.longitude;
+               function showPosition(position) {
+                 var api = "https://fcc-weather-api.glitch.me/api/current?lat=" + position.coords.latitude + "&lon=" + position.coords.longitude;
+                  
+                    $.getJSON(api, function(data){
+    // Getting Weather Details
+    $("#place").html(data.name + ", " + data.sys.country);
+    $("#windSpeed").html(data.wind.speed + "km/h");
+    $("#humidity").html(data.main.humidity + "%");
+    $("#celsius").html(data.main.temp.toFixed(1) + "°C");
+    $("#temp").html(data.main.temp.toFixed(1));
+    $("#description").html(data.weather[0].description);
+    
+    // Get Current Date and Time
+    var dt = new Date();
+    $("#dateTime").html(dt.getDate() + "/" + (dt.getMonth()+1)  + "/" + dt.getFullYear() + " "+ dt.getHours() + ":" + dt.getMinutes());
+                 
             </script>
+             <div id="place"></div>
+             <div id="windSpeed"></div>
          </div><!- col-md-12 -->
         </div><!-- container -->  
        </div><!-- row -->
