@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+   <!-- source for script https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Sections_and_Outlines_of_an_HTML5_document -->
+   <!--[if lt IE 9]>
+  <script>
+    document.createElement("header" );
+    document.createElement("footer" );
+    document.createElement("section"); 
+    document.createElement("aside"  );
+    document.createElement("nav"    );
+    document.createElement("article"); 
+    document.createElement("hgroup" ); 
+    document.createElement("time"   );
+  </script>
+  <noscript>
+     <strong>Warning !</strong>
+     Because your browser does not support HTML5, some elements are created using JavaScript.
+     Unfortunately your browser has disabled scripting. Please enable it in order to display this page.
+  </noscript>
+<![endif]-->
+<head>
+  <title>Proof of Concept | Find My Family</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/screenshot.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+ </head>
+  <body onload="showMyFace()">
+     <div class="space25">&nbsp;</div><!-- holder for future accessibility notifications -->
+       <div class="row">
+       <div class="container">
+          
+            <div class="col-md-4">
+                 <!-- source code https://www.w3schools.com/htmL/tryit.asp?filename=tryhtml5_geolocation --> 
+                 <div id="map">
+                        <iframe id="google_map" src="https://maps.google.co.uk/?output=embed"></iframe>
+                 </div><!-- map -->
+
+               <p>Click the button to get your coordinates.</p>
+
+               <button class="btn btn-primary btn-lg" onclick="getLocation()">Get Location</button>
+
+               <div id="demo"></div><br />
+               <div><!-- form wrapper -->
+                  <form>
+                       Latitude:<br>
+                       <input type="text" id="latcoords" name="latcoords"><br>
+                       Longitude:<br>
+                       <input type="text" id="longcoords" name="longcoords"><br>
+                       <!-- image capture see https://www.html5rocks.com/en/tutorials/getusermedia/intro/ -->
+                       <!-- <input type="file" accept="image/*;capture=camera"><br > -->
+                     <button class="btn btn-primary btn-lg" value="Submit">Send Location</button>
+                   </form>
+               </div><br><!-- end form wrapper -->
+                     <script>
+                     var x       = document.getElementById("demo"),
+                         xlat    = document.getElementById("latcoords"),
+                         xlong   = document.getElementById("longcoords");
+                        
+                     function getLocation() {
+                         if (navigator.geolocation) {
+                             navigator.geolocation.getCurrentPosition(showPosition);
+                         } else { 
+                             x.innerHTML = "Geolocation is not supported by this browser.";
+                         }
+                     }
+
+                     function showPosition(position) {
+                         x.innerHTML = "Latitude: " + position.coords.latitude + 
+                         "<br>Longitude: " + position.coords.longitude;
+                        
+                        document.getElementById("latcoords").value = position.coords.latitude;
+                        document.getElementById("longcoords").value = position.coords.longitude;
+                     }
+                     </script>
+                    <div><!-- form wrapper -->
+                     <form>
+                        <img id="screenshot-img2"><br>
+                        <button class="btn btn-primary btn-lg" value="Submit">Send Snapshot</button>
+                     </form>   
+                    </div><!-- end form wrapper -->
+              </div><!-- col md 4 -->       
+              <div class="col-md-8">               
+                 
+                        <script>
+                           function hasGetUserMedia() {
+                             return !!(navigator.mediaDevices &&
+                               navigator.mediaDevices.getUserMedia);
+                           }
+                           if (hasGetUserMedia()) {
+                             // Good to go!
+                           } else {
+                             alert('getUserMedia() is not supported by your browser');
+                           }
+                          </script>
+                          <div id="screenshot" style="text-align:center;">
+                          <video class="videostream" autoplay></video>
+                          <img id="screenshot-img" style="display:none;">
+
+                             <p><button class="capture-button btn btn-primary btn-lg">Step One: Capture the Video</button></p>
+                             <p><button id="screenshot-button" class="btn btn-primary btn-lg">Step Two: Take a Snapshot</button></p>   
+                        </div><!-- id screenshot -->
+                         <script>
+                            
+                        const hdConstraints = {
+                          video: {width: {min: 1280}, height: {min: 720}}
+                        };
+                        navigator.mediaDevices.getUserMedia(hdConstraints).
+                          then((stream) => {video.srcObject = stream});
+
+                       const vgaConstraints = {
+                          video: {width: {exact: 640}, height: {exact: 480}}
+                        };
+                        navigator.mediaDevices.getUserMedia(vgaConstraints).
+                          then((stream) => {video.srcObject = stream}); 
+                            
+                       </script>
+ 
+                       <script>
+                      const captureVideoButton =
+                       document.querySelector('#screenshot .capture-button');
+                     const screenshotButton = document.querySelector('#screenshot-button');
+                     const img = document.querySelector('#screenshot img');
+                     const img2 = document.querySelector('#screenshot-img2');
+                     const video = document.querySelector('#screenshot video');
+                     const canvas = document.createElement('canvas');
+
+                     captureVideoButton.onclick = function() {
+                       navigator.mediaDevices.getUserMedia(constraints).
+                         then(handleSuccess).catch(handleError);
+                     };
+
+                     screenshotButton.onclick = video.onclick = function() {
+                       canvas.width = video.videoWidth;
+                       canvas.height = video.videoHeight;
+                       canvas.getContext('2d').drawImage(video, 0, 0);
+                       // Other browsers will fall back to image/png
+                       img.src = canvas.toDataURL('image/webp');       
+                       img2.src = canvas.toDataURL('image/webp'); 
+                     };
+
+                     function handleSuccess(stream) {
+                       screenshotButton.disabled = false;
+                       video.srcObject = stream;
+                     }
+                 
+                 </script>
+
+                 <script>
+                    
+                    const videoElement = document.querySelector('video');
+                           const audioSelect = document.querySelector('select#audioSource');
+                           const videoSelect = document.querySelector('select#videoSource');
+
+                           navigator.mediaDevices.enumerateDevices()
+                             .then(gotDevices).then(getStream).catch(handleError);
+
+                           audioSelect.onchange = getStream;
+                           videoSelect.onchange = getStream;
+
+                           function gotDevices(deviceInfos) {
+                             for (let i = 0; i !== deviceInfos.length; ++i) {
+                               const deviceInfo = deviceInfos[i];
+                               const option = document.createElement('option');
+                               option.value = deviceInfo.deviceId;
+                               if (deviceInfo.kind === 'audioinput') {
+                                 option.text = deviceInfo.label ||
+                                   'microphone ' + (audioSelect.length + 1);
+                                 audioSelect.appendChild(option);
+                               } else if (deviceInfo.kind === 'videoinput') {
+                                 option.text = deviceInfo.label || 'camera ' +
+                                   (videoSelect.length + 1);
+                                 videoSelect.appendChild(option);
+                               } else {
+                                 console.log('Found another kind of device: ', deviceInfo);
+                               }
+                             }
+                           }
+
+                        function getStream() {
+                          if (window.stream) {
+                            window.stream.getTracks().forEach(function(track) {
+                              track.stop();
+                            });
+                          }
+
+                          const constraints = {
+                            audio: {
+                              deviceId: {exact: audioSelect.value}
+                            },
+                            video: {
+                              deviceId: {exact: videoSelect.value}
+                            }
+                          };
+
+                          navigator.mediaDevices.getUserMedia(constraints).
+                            then(gotStream).catch(handleError);
+                        }
+
+                        function gotStream(stream) {
+                          window.stream = stream; // make stream available to console
+                          videoElement.srcObject = stream;
+                        }
+
+                        function handleError(error) {
+                          console.error('Error: ', error);
+                        }
+                 </script>   
+         
+                <!-- end image capture -->
+                   
+                </div><!-- col-md  8 -->
+            </div><!-- container -->  
+       </div><!-- row -->
+       <script src="js/script.js"></script>
+      <!-- <script async defer src="js/geolocate.js"></script>  -->
+  </body> 
+</html>
