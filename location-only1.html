@@ -32,43 +32,46 @@
        <div class="row">
         <div class="container">
           <div class="col-md-12">
-            <script>
-               if (navigator.geolocation) {				
-                navigator.geolocation.getCurrentPosition(showPosition);
-               } else {
-                alert('Geolocation is not supported in your browser');
-               }
 
-               function showPosition(position) {
-                 var api = "https://fcc-weather-api.glitch.me/api/current?lat=" + position.coords.latitude + "&lon=" + position.coords.longitude;
-                  
-                     var place        = document.getElementById("place"),
-                         windSpeed    = document.getElementById("windSpeed"),
-                         humidity     = document.getElementById("humidity"),
-                         celsius      = document.getElementById("celsius"),
-                         temp         = document.getElementById("temp"),
-                         description  = document.getElementById("description");
-                  
-                    $.getJSON(api, function(data){
-    // Getting Weather Details
-    $("#place").html(data.name + ", " + data.sys.country);
-    $("#windSpeed").html(data.wind.speed + "km/h");
-    $("#humidity").html(data.main.humidity + "%");
-    $("#celsius").html(data.main.temp.toFixed(1) + "°C");
-    $("#temp").html(data.main.temp.toFixed(1));
-    $("#description").html(data.weather[0].description);
-    
-    // Get Current Date and Time
-    var dt = new Date();
-    $("#dateTime").html(dt.getDate() + "/" + (dt.getMonth()+1)  + "/" + dt.getFullYear() + " "+ dt.getHours() + ":" + dt.getMinutes());
-                 
-            </script>
+             <p><a href="https://fcc-weather-api.glitch.me/">https://fcc-weather-api.glitch.me/</a></p>
+             <p>Use the endpoint: https://fcc-weather-api.glitch.me/. Use this endpoint to get the weather at a location. To prevent abuses this server accepts GET requests only, and serves only the route /api/current?lon=:longitude&lat=:latitude. </p>
              <div id="place"></div>
              <div id="windSpeed"></div>
              <div id="humidity"></div>
              <div id="celsius"></div>
              <div id="temp"></div>
              <div id="description"></div>
+             
+             <!-- jQuery example https://codepen.io/merakireal/pen/Ozyxao?editors=1010 -->
+            <script>
+               if (navigator.geolocation) {				
+                navigator.geolocation.getCurrentPosition(showPosition);
+               } else {
+                alert('Geolocation is not supported in your browser');
+               }
+               //JQuery
+               function showPosition(position) {
+                 var api = "https://fcc-weather-api.glitch.me/api/current?lat=" + position.coords.latitude + "&lon=" + position.coords.longitude;
+
+               //javascript only version starts here   
+               function showPosition2(position2) {
+                         x.innerHTML = "Latitude: " + position.coords.latitude + 
+                         "<br>Longitude: " + position.coords.longitude;
+                        
+                        document.getElementById("latcoords").value = position.coords.latitude;
+                        document.getElementById("longcoords").value = position.coords.longitude;
+                     }
+                        
+                     var place        = document.getElementById("place"),
+                         windSpeed    = document.getElementById("windSpeed"),
+                         humidity     = document.getElementById("humidity"),
+                         celsius      = document.getElementById("celsius"),
+                         temp         = document.getElementById("temp"),
+                         description  = document.getElementById("description");
+
+                 
+            </script>
+
          </div><!- col-md-12 -->
         </div><!-- container -->  
        </div><!-- row -->
