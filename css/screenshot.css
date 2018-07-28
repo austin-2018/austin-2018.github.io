@@ -5,14 +5,10 @@ video, #screenshot-img {
 }
 */
 video {
-  width: 400px;
-  height: 300px;
+  width: 200px;
+  height: 150px;
 }
 #screenshot-img {
-  width: 1px;
-  height: 1px;
-}
-#screenshot-img2 {
   width: 200px;
   height: 150px;
 }
