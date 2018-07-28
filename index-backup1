@@ -36,7 +36,7 @@
                  <!-- source code https://www.w3schools.com/htmL/tryit.asp?filename=tryhtml5_geolocation --> 
                  <div id="map">
                         <iframe id="google_map" src="https://maps.google.co.uk/?output=embed"></iframe>
-                  </div><!-- map -->
+                 </div><!-- map -->
 
                <p>Click the button to get your coordinates.</p>
 
@@ -51,7 +51,7 @@
                        Longitude:<br>
                        <input type="text" id="longcoords" name="longcoords"><br>
                        <!-- image capture see https://www.html5rocks.com/en/tutorials/getusermedia/intro/ -->
-                       <input type="file" accept="image/*;capture=camera"><br />
+                       <input type="file" accept="image/*;capture=camera"><br >
                      <button class="btn btn-primary btn-lg" value="Submit">Submit</button>
                    </form>
                </div>
@@ -76,7 +76,9 @@
                         document.getElementById("longcoords").value = position.coords.longitude;
                      }
                      </script>
-               
+               !!//////
+               <img id="screenshot-img2">
+               !!/////
               </div><!-- col md 4 -->       
               <div class="col-md-8">               
                  
@@ -85,7 +87,6 @@
                              return !!(navigator.mediaDevices &&
                                navigator.mediaDevices.getUserMedia);
                            }
-
                            if (hasGetUserMedia()) {
                              // Good to go!
                            } else {
@@ -94,11 +95,11 @@
                           </script>
                           <div id="screenshot" style="text-align:center;">
                           <video class="videostream" autoplay></video>
-                          <img id="screenshot-img"><br>  
-                             <button class="capture-button btn btn-primary btn-lg">Step One: Capture the Video</button><br>
-                             <button id="screenshot-button" class="btn btn-primary btn-lg">Step Two: Take a Screenshot</button><br>   
-                                
-                         </div><!-- id screenshot -->
+                          <img id="screenshot-img">
+                             <p>ScreenShot Image</p>
+                             <p><button class="capture-button btn btn-primary btn-lg">Step One: Capture the Video</button></p>
+                             <p><button id="screenshot-button" class="btn btn-primary btn-lg">Step Two: Take a Screenshot</button></p>   
+                        </div><!-- id screenshot -->
                          <script>
                             
                         const hdConstraints = {
@@ -114,12 +115,15 @@
                           then((stream) => {video.srcObject = stream}); 
                             
                        </script>
-                 
+ 
                        <script>
                       const captureVideoButton =
                        document.querySelector('#screenshot .capture-button');
                      const screenshotButton = document.querySelector('#screenshot-button');
                      const img = document.querySelector('#screenshot img');
+                          //
+                     const img2 = document.querySelector('#screenshot-img2');
+                          //
                      const video = document.querySelector('#screenshot video');
 
                      const canvas = document.createElement('canvas');
@@ -135,15 +139,19 @@
                        canvas.getContext('2d').drawImage(video, 0, 0);
                        // Other browsers will fall back to image/png
                        img.src = canvas.toDataURL('image/webp');
+                        //
+                       img2.src = canvas.toDataURL('image/webp'); 
                      };
 
                      function handleSuccess(stream) {
                        screenshotButton.disabled = false;
                        video.srcObject = stream;
                      }
+                 
                  </script>
 
                  <script>
+                    
                     const videoElement = document.querySelector('video');
                            const audioSelect = document.querySelector('select#audioSource');
                            const videoSelect = document.querySelector('select#videoSource');
