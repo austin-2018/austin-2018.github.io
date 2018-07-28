@@ -78,13 +78,8 @@
                         document.getElementById("longcoords").value = position.coords.longitude;
                      }
                      </script>
-                    <div><!-- form wrapper -->
-                     <form>
-                        <img id="screenshot-img2"><br>
-                        <button class="btn btn-primary btn-lg" value="Submit">Send Snapshot</button>
-                     </form>   
-                    </div><!-- end form wrapper -->
-              </div><!-- col md 4 -->       
+
+                    </div><!-- col md 4 -->       
               <div class="col-md-8">               
                  
                         <script>
@@ -126,7 +121,7 @@
                        document.querySelector('#screenshot .capture-button');
                      const screenshotButton = document.querySelector('#screenshot-button');
                      const img = document.querySelector('#screenshot img');
-                     const img2 = document.querySelector('#screenshot-img2');
+
                      const video = document.querySelector('#screenshot video');
                      const canvas = document.createElement('canvas');
 
@@ -141,8 +136,7 @@
                        canvas.getContext('2d').drawImage(video, 0, 0);
                        // Other browsers will fall back to image/png
                        img.src = canvas.toDataURL('image/webp');       
-                       img2.src = canvas.toDataURL('image/webp'); 
-                     };
+                         };
 
                      function handleSuccess(stream) {
                        screenshotButton.disabled = false;
