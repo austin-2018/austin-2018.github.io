@@ -29,12 +29,25 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
  </head>
   <body>
-     <div class="space25">&nbsp;</div><!-- holder for future accessibility notifications -->
+     <!-- Source of code https://www.taniarascia.com/how-to-connect-to-an-api-with-javascript/ -->
        <div class="row">
         <div class="container">
           <div class="col-md-12">
+             <script>
+               // Create a request variable and assign a new XMLHttpRequest object to it.
+               var request = new XMLHttpRequest();
 
+               // Open a new connection, using the GET request on the URL endpoint
+               request.open('GET', 'https://ghibliapi.herokuapp.com/films', true);
 
+               request.onload = function () {
+                 // Begin accessing JSON data here
+                 }
+               }
+
+               // Send request
+               request.send();
+             </script>
              
 
 
