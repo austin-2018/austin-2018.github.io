@@ -1,4 +1,14 @@
-video, #screenshot-img, #screenshot-img2 {
+/* original
+video, #screenshot-img {
   width: 400px;
   height: 300px;
+}
+*/
+video {
+  width: 400px;
+  height: 300px;
+}
+#screenshot-img {
+  width: 200px;
+  height: 150px;
 }
