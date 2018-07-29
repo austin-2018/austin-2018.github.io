@@ -26,6 +26,7 @@
 #### Reading files in JavaScript using the File APIs | https://www.html5rocks.com/en/tutorials/file/dndfiles/
 ##### Stack Overflow | https://stackoverflow.com/questions/16338937/html-media-capture-api-vs-getusermedia
 ##### Stack Overflow | https://stackoverflow.com/questions/23916566/html5-input-type-file-accept-image-capture-camera-display-as-image-rat
+##### Tania Rascia  | https://www.taniarascia.com/how-to-connect-to-an-api-with-javascript/
 ##### W3 | Media Capture | https://www.w3.org/TR/html-media-capture/
 ##### W3C Schools | Using HTML Geolocation | https://www.w3schools.com/htmL/tryit.asp?filename=tryhtml5_geolocation
 ##### W3 | Capture Element | https://www.w3.org/TR/html-media-capture/
