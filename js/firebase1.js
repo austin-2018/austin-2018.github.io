@@ -40,3 +40,4 @@ function saveMessageNoCamera(latcoords, longcoords, name, phone){
     name: name,
     phone:phone
   });
+}
