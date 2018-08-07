@@ -37,5 +37,4 @@ function saveMessage(latcoords, longcoords, name, phone){
     longcoords:longcoords,
     name: name,
     phone:phone
-
   });
