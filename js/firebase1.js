@@ -8,3 +8,9 @@
     messagingSenderId: "511040371879"
   };
   firebase.initializeApp(config);
+
+// Reference messages collection
+var messagesRef = firebase.database().ref('messages');
+
+// Listen for form submit
+document.getElementById('nocameraForm').addEventListener('submit', submitNoCameraForm);
