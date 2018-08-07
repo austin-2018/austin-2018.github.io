@@ -18,6 +18,10 @@ document.getElementById('nocameraform').addEventListener('submit', submitNoCamer
 // Submit form
 function submitNoCameraForm(e){
   e.preventDefault();
+  var name = getInputValNoCamera('latcoords');
+  var phone = getInputValNoCamera('longcoords'); 
+  var name = getInputValNoCamera('name');
+  var phone = getInputValNoCamera('phone'); 
 } 
 
 // Function to get get form values
