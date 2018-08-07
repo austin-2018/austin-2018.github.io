@@ -33,7 +33,7 @@ function submitNoCameraForm(e){
     document.querySelector('.alert').style.display = 'none';
   },3000);
   
-  document.getElementById('submitNoCameraForm').reset();
+  document.getElementById('nocameraform').reset();
 } 
 
 // Function to get get form values
