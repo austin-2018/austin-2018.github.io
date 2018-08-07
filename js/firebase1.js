@@ -18,10 +18,12 @@ document.getElementById('nocameraform').addEventListener('submit', submitNoCamer
 // Submit form
 function submitNoCameraForm(e){
   e.preventDefault();
-  var name = getInputValNoCamera('latcoords');
-  var phone = getInputValNoCamera('longcoords'); 
+  var latcoords = getInputValNoCamera('latcoords');
+  var longcoords = getInputValNoCamera('longcoords'); 
   var name = getInputValNoCamera('name');
-  var phone = getInputValNoCamera('phone'); 
+  var phone = getInputValNoCamera('phone');
+  
+  saveMessageNoCamera(latcoords, longcoords, name, phone);
 } 
 
 // Function to get get form values
@@ -30,7 +32,7 @@ function getInputValNoCamera(id){
 }
 
 // Save message to firebase
-function saveMessage(latcoords, longcoords, name, phone){
+function saveMessageNoCamera(latcoords, longcoords, name, phone){
   var newMessageRefNoCamera = messagesRefNoCamera.push();
   newMessageRefNoCamera.set({
     latcoords: latcoords,
