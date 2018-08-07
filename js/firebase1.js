@@ -24,6 +24,16 @@ function submitNoCameraForm(e){
   var phone = getInputValNoCamera('phone');
   
   saveMessageNoCamera(latcoords, longcoords, name, phone);
+  
+    // Show alert
+  document.querySelector('.alert').style.display = 'block';
+
+  // Hide alert after 3 seconds
+  setTimeout(function(){
+    document.querySelector('.alert').style.display = 'none';
+  },3000);
+  
+  document.getElementById('submitNoCameraForm').reset();
 } 
 
 // Function to get get form values
