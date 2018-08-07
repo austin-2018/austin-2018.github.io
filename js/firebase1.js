@@ -13,4 +13,9 @@
 var messagesRef = firebase.database().ref('messages');
 
 // Listen for form submit
-document.getElementById('nocameraForm').addEventListener('submit', submitNoCameraForm);
+document.getElementById('nocameraform').addEventListener('submit', submitNoCameraForm);
+
+// Submit form
+function submitNoCameraForm(e){
+  e.preventDefault();
+} 
