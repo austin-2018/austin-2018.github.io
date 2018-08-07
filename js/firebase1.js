@@ -10,7 +10,7 @@
   firebase.initializeApp(config);
 
 // Reference messages collection
-var messagesRef = firebase.database().ref('messages');
+var messagesRefNoCamera = firebase.database().ref('messages');
 
 // Listen for form submit
 document.getElementById('nocameraform').addEventListener('submit', submitNoCameraForm);
@@ -28,3 +28,14 @@ function submitNoCameraForm(e){
 function getInputValNoCamera(id){
   return document.getElementById(id).value;
 }
+
+// Save message to firebase
+function saveMessage(latcoords, longcoords, name, phone){
+  var newMessageRefNoCamera = messagesRefNoCamera.push();
+  newMessageRefNoCamera.set({
+    latcoords: latcoords,
+    longcoords:longcoords,
+    name: name,
+    phone:phone
+
+  });
