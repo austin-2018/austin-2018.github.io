@@ -19,3 +19,8 @@ document.getElementById('nocameraform').addEventListener('submit', submitNoCamer
 function submitNoCameraForm(e){
   e.preventDefault();
 } 
+
+// Function to get get form values
+function getInputValNoCamera(id){
+  return document.getElementById(id).value;
+}
