@@ -50,22 +50,33 @@
 
                <p><button class="btn btn-primary btn-lg" onclick="getLocation()">Step 1: Get Your Location</button></p>
 
-               <div id="demo"></div><br>
-               <div>
-                  <h3>Send in the Information</h3>
+              <div id="demo"></div><br>
 
-                  <form>
-                       Latitude:<br>
+              <div><!-- wrapper -->
+              <div class="alert"></div>
+                 <form id="contactForm">
+                    <p>
+                       <label>Latitude</label><br>
                        <input type="text" id="latcoords" name="latcoords"><br>
-                       Longitude:<br>
+                    </p>
+                    <p>
+                       <label>Latitude</label><br>
                        <input type="text" id="longcoords" name="longcoords"><br>
-                       <!-- image capture see https://www.html5rocks.com/en/tutorials/getusermedia/intro/ -->
-                       <!-- <input type="file" accept="image/*;capture=camera"><br >  -->
-                       Your Name:<br>
-                       <input type="text" /><br>
-                     <p><button class="btn btn-primary btn-lg" value="Submit">Step 2: Send Your Location</button></p>
-                   </form>
-               </div>
+                    </p>
+                   <p>
+                     <label>Name</label><br>
+                     <input type="text" name="name" id="name">
+                   </p>
+                   <p>
+                     <label>Phone Number</label><br>
+                     <input type="text" name="phone" id="phone">
+                   </p>
+                   <p>
+                     <button type="submit" class="btn btn-primary btn-lg" value="submit">Step 2: Submit</button>
+                   </p>
+                 </form>
+            </div><!-- wrapper -->
+
                      <script>
                      var x       = document.getElementById("demo"),
                          xlat    = document.getElementById("latcoords"),
@@ -102,6 +113,7 @@
                            }
                           </script>
                           <div id="screenshot" style="text-align:center;">
+                          <!-- image capture see https://www.html5rocks.com/en/tutorials/getusermedia/intro/ -->
                           <video class="videostream" autoplay></video>
                           
                              <p><button class="capture-button btn btn-primary btn-lg">Step 1: Capture the Video</button></p>
@@ -152,6 +164,7 @@
                      }
                  
                  </script>
+                 
                  <script>
                     
                     const videoElement = document.querySelector('video');
@@ -217,7 +230,11 @@
                 </div><!-- col-md  8 -->
             </div><!-- container -->  
        </div><!-- row -->
-       <script src="js/script.js"></script>
-      <!-- <script async defer src="js/geolocate.js"></script>  -->
-  </body> 
+
+  </body>
+<script src="js/script.js"></script>
+<!-- <script async defer src="js/geolocate.js"></script>  -->  
+<script src="https://www.gstatic.com/firebasejs/5.3.1/firebase.js"></script>
+<script src="js/fb1.js"></script><!-- associated with the firebase js in the line immediately above -->   
+
 </html>
