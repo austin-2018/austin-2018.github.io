@@ -16,21 +16,24 @@
 
 #### Part Two: References
 ##### Blog | TeamTreeHouse | Filereader API | http://blog.teamtreehouse.com/reading-files-using-the-html5-filereader-api
-#### Capturing images from the camera in the browser using getUserMedia (with mirroring) | https://html5.by/blog/html5-image-capture-getusermedia-stream-api-mirror/
+##### Capturing images from the camera in the browser using getUserMedia (with mirroring) | https://html5.by/blog/html5-image-capture-getusermedia-stream-api-mirror/
 ##### Google Developrs| Geolocation on HTTPS |https://developers.google.com/web/updates/2016/04/geolocation-on-secure-contexts-only
 ##### Google Maps Platform | Maps JavaScript API | https://developers.google.com/maps/documentation/javascript/tutorial
 ##### Gorigins | http://gorigins.com/posting-a-canvas-image-to-facebook-and-twitter/
 ##### HTML5 Rocks | Capturing Audio and Video in HTML5 | https://www.html5rocks.com/en/tutorials/getusermedia/intro/
 ##### HTML5 Tutorials: Detect user's location with HTML Geolocation | https://www.youtube.com/watch?v=BqI54Snkw0s
-##### MDN Web Docs | https://developer.mozilla.org/en-US/docs/Web/API/URL/createObjectURL
-##### MDN Web Docs | Example | https://developer.mozilla.org/en-US/docs/Web/API/File/Using_files_from_web_applications#Example_Using_object_URLs_to_display_images
+##### MDN Web Docs | Example One | https://developer.mozilla.org/en-US/docs/Web/API/File/Using_files_from_web_applications#Example_Using_object_URLs_to_display_images
+##### MDN Web Docs | Example Two | https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/toDataURL
+##### MDN Web Docs | Reference One | https://developer.mozilla.org/en-US/docs/Web/API/URL/createObjectURL
+##### MDN Web Docs | Reference Two | Data URLS | https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs
 #### Reading files in JavaScript using the File APIs | https://www.html5rocks.com/en/tutorials/file/dndfiles/
 ##### Stack Overflow | https://stackoverflow.com/questions/16338937/html-media-capture-api-vs-getusermedia
 ##### Stack Overflow | https://stackoverflow.com/questions/23916566/html5-input-type-file-accept-image-capture-camera-display-as-image-rat
 ##### Tania Rascia  | https://www.taniarascia.com/how-to-connect-to-an-api-with-javascript/
+##### W3 | Capture Element | https://www.w3.org/TR/html-media-capture/
 ##### W3 | Media Capture | https://www.w3.org/TR/html-media-capture/
 ##### W3C Schools | Using HTML Geolocation | https://www.w3schools.com/htmL/tryit.asp?filename=tryhtml5_geolocation
-##### W3 | Capture Element | https://www.w3.org/TR/html-media-capture/
+
 
 #### SUPPLEMENTAL
 
