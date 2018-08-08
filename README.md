@@ -20,6 +20,7 @@
 ##### Google Developrs| Geolocation on HTTPS |https://developers.google.com/web/updates/2016/04/geolocation-on-secure-contexts-only
 ##### Google Maps Platform | Maps JavaScript API | https://developers.google.com/maps/documentation/javascript/tutorial
 ##### Gorigins | http://gorigins.com/posting-a-canvas-image-to-facebook-and-twitter/
+##### HTML5 Canvas Tutorials | https://www.html5canvastutorials.com/advanced/html5-canvas-load-image-data-url/
 ##### HTML5 Rocks | Capturing Audio and Video in HTML5 | https://www.html5rocks.com/en/tutorials/getusermedia/intro/
 ##### HTML5 Tutorials: Detect user's location with HTML Geolocation | https://www.youtube.com/watch?v=BqI54Snkw0s
 ##### MDN Web Docs | Example One | https://developer.mozilla.org/en-US/docs/Web/API/File/Using_files_from_web_applications#Example_Using_object_URLs_to_display_images
