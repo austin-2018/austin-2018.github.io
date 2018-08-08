@@ -117,7 +117,8 @@
                           
                              <p><button class="capture-button btn btn-primary btn-lg">Step 1: Capture the Video</button></p>
                              <p><button id="screenshot-button" class="btn btn-primary btn-lg">Step 2: Take a Screenshot</button></p>   
-                          <img id="screenshot-img">       
+                          <img id="screenshot-img">
+                          <input type="text" name="hidden-screenshot" id="hidden-screenshot" />
                      </div><!-- id screenshot -->
                          <script>
                             
@@ -143,9 +144,7 @@
                       const video = document.querySelector('#screenshot video');
 
                       const canvas = document.createElement('canvas');
-                          //https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/toDataURL              
-                      const canvasSnapShot = document.querySelector('#screenshot-img');
-                          //https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/toDataURL
+
                      captureVideoButton.onclick = function() {
                        navigator.mediaDevices.getUserMedia(constraints).
                          then(handleSuccess).catch(handleError);
@@ -157,6 +156,9 @@
                        canvas.getContext('2d').drawImage(video, 0, 0);
                        // Other browsers will fall back to image/png
                        img.src = canvas.toDataURL('image/webp');
+
+                       //https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/toDataURL
+                        document.getElementById("hidden-screenshot").value = canvas.toDataURL('image/webp');                                         
                      };
 
                      function handleSuccess(stream) {
