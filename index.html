@@ -150,8 +150,6 @@
                       const img = document.querySelector('#screenshot img');
                       const video = document.querySelector('#screenshot video');
                       const canvas = document.createElement('canvas');
-                          //https://gist.github.com/kylejson/9716881
-                          const dataURL = canvas.toDataURL();
 
                      captureVideoButton.onclick = function() {
                        navigator.mediaDevices.getUserMedia(constraints).
@@ -165,13 +163,9 @@
                        // Other browsers will fall back to image/png
                        img.src = canvas.toDataURL('image/webp');
                        //img.src = canvas.toDataURL('image/png');
-                       //
-                       //https://gist.github.com/kylejson/9716881
-                       document.getElementById('hidden-screenshot').src = dataURL;
-                        
-                       // 
+
                        //https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/toDataURL
-                       //document.getElementById("hidden-screenshot").value = canvas.toDataURL('image/webp');
+                       document.getElementById("hidden-screenshot").value = canvas.toDataURL('image/webp');
                        //document.getElementById("hidden-screenshot").value = canvas.toDataURL('image/png'); 
                      };
 
