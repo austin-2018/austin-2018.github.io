@@ -32,11 +32,20 @@
 ##### MDN Web Docs | Example Two | https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/toDataURL
 ##### MDN Web Docs | Reference One | https://developer.mozilla.org/en-US/docs/Web/API/URL/createObjectURL
 ##### MDN Web Docs | Reference Two | Data URLS | https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs
+##### MDN Web Docs | Reference Three | https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/toDataURL
+##### MDN Web Docs | Reference Four | https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs
+##### MDN Web Docs | Reference Five | https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/getImageData
+##### MDN Web Docs | Reference Six | https://developer.mozilla.org/en-US/docs/Web/API/ImageData
+##### MDN Web Docs | Reference Seven | https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types
+##### MDN Web Docs | Reference Eight | https://developer.mozilla.org/en-US/docs/Web/HTML/Supported_media_formats
+##### MDN Web Docs | Reference Nine | https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs
 #### Reading files in JavaScript using the File APIs | https://www.html5rocks.com/en/tutorials/file/dndfiles/
 ##### Stack Overflow | Reference One | https://stackoverflow.com/questions/16338937/html-media-capture-api-vs-getusermedia
 ##### Stack Overflow | Reference Two | https://stackoverflow.com/questions/23916566/html5-input-type-file-accept-image-capture-camera-display-as-image-rat
 ##### StackOverflow | Reference Three |https://stackoverflow.com/questions/42879012/how-do-i-upload-a-base64-encoded-image-string-directly-to-a-google-cloud-stora [Consulted this ref when putting encoded Canvas into form -- error URI too long]
-##### StackOverflow | Reference Four | https://stackoverflow.com/questions/34242155/how-to-crop-canvas-todataurl
+##### StackOverflow | Reference Four | https://stackoverflow.com/questions/33297858/input-type-file-set-base64-image-data
+##### StackOverflow | Reference Five | https://stackoverflow.com/questions/34242155/how-to-crop-canvas-todataurl
+##### StackOverflow | Reference Six | Data URI |https://stackoverflow.com/questions/4998908/convert-data-uri-to-file-then-append-to-formdata/5100158
 ##### Tania Rascia  | https://www.taniarascia.com/how-to-connect-to-an-api-with-javascript/
 ##### W3 | Capture Element | https://www.w3.org/TR/html-media-capture/
 ##### W3 | Media Capture | https://www.w3.org/TR/html-media-capture/
@@ -52,6 +61,7 @@
 ##### https://stackoverflow.com/questions/42879012/how-do-i-upload-a-base64-encoded-image-string-directly-to-a-google-cloud-stora
 ##### https://groups.google.com/forum/#!topic/firebase-talk/aDJvYyNIJik
 ##### https://permadi.com/2010/10/html5-saving-canvas-image-data-using-php-and-ajax/
+##### https://stackoverflow.com/questions/4998908/convert-data-uri-to-file-then-append-to-formdata/5100158
 
 
 
