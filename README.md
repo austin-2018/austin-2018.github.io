@@ -18,6 +18,7 @@
 
 ##### Blog | TeamTreeHouse | Filereader API | http://blog.teamtreehouse.com/reading-files-using-the-html5-filereader-api
 ##### Capturing images from the camera in the browser using getUserMedia (with mirroring) | https://html5.by/blog/html5-image-capture-getusermedia-stream-api-mirror/
+##### Draw Canvas Upload and Save on Server | https://www.codicode.com/art/upload_and_save_a_canvas_image_to_the_server.aspx
 ##### Google-Groups | Reference One | https://groups.google.com/forum/#!topic/firebase-talk/aDJvYyNIJik
 ##### Google Developrs| Reference One | Geolocation on HTTPS |https://developers.google.com/web/updates/2016/04/geolocation-on-secure-contexts-only
 ##### Google Developers | Reference Two | https://developers.google.com/web/fundamentals/media/capturing-images/
