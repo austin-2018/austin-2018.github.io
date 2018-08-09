@@ -70,6 +70,11 @@
                      <label>Phone Number</label><br>
                      <input type="text" name="phone" id="phone">
                    </p>
+                    <p>
+                    <label>Hidden Field</label><br>
+                    <input type="hidden" name="myHiddenField"> 
+                    </p>
+                    
                    <p>
                      <button type="submit" class="btn btn-primary btn-lg" value="submit">Step 2: Submit</button>
                    </p>
@@ -118,7 +123,7 @@
                              <p><button class="capture-button btn btn-primary btn-lg">Step 1: Capture the Video</button></p>
                              <p><button id="screenshot-button" class="btn btn-primary btn-lg">Step 2: Take a Screenshot</button></p>   
                           <img id="screenshot-img"><br>
-                             <p>
+                             <p> 
                              <h5>Data URL</h5>  
                           <input type="text" name="hidden-screenshot" id="hidden-screenshot" />
                              </p>
@@ -161,10 +166,13 @@
                        canvas.getContext('2d').drawImage(video, 0, 0);
                        // Other browsers will fall back to image/png
                        img.src = canvas.toDataURL('image/webp');
+                       imageData = img.src; 
                        //img.src = canvas.toDataURL('image/png');
                        //https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/toDataURL
                        document.getElementById("hidden-screenshot").value = canvas.toDataURL('image/webp');
-                       //document.getElementById("hidden-screenshot").value = canvas.toDataURL('image/png'); 
+                       //document.getElementById("hidden-screenshot").value = canvas.toDataURL('image/png');
+                    
+                       document.getElementsByName("myHiddenField")[0].setAttribute("value", imageData);
                      };
 
                      function handleSuccess(stream) {
