@@ -142,6 +142,9 @@
                        document.querySelector('#screenshot .capture-button');
                       const screenshotButton = document.querySelector('#screenshot-button');
                       const img = document.querySelector('#screenshot img');
+                          ///
+                      const img2 = document.querySelector('#screenshot-img');   
+                          ///
                       const video = document.querySelector('#screenshot video');
 
                       const canvas = document.createElement('canvas');
@@ -157,6 +160,8 @@
                        canvas.getContext('2d').drawImage(video, 0, 0);
                        // Other browsers will fall back to image/png
                        img.src = canvas.toDataURL('image/webp');
+                        ////
+                        img2.src = canvas.toDataURL('image/webp');
 
                        //https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/toDataURL
                         document.getElementById("hidden-screenshot").value = canvas.toDataURL('image/webp');                                         
