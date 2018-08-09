@@ -3,7 +3,7 @@ video, #screenshot-img {
   width: 400px;
   height: 300px;
 }
-*/
+/* width shrunk down from 400 by 300 to accomodate md-4 */
 video {
   width: 300px;
   height: 225px;
