@@ -35,6 +35,7 @@
 ##### Stack Overflow | Reference One | https://stackoverflow.com/questions/16338937/html-media-capture-api-vs-getusermedia
 ##### Stack Overflow | Reference Two | https://stackoverflow.com/questions/23916566/html5-input-type-file-accept-image-capture-camera-display-as-image-rat
 ##### StackOverflow | Reference Three |https://stackoverflow.com/questions/42879012/how-do-i-upload-a-base64-encoded-image-string-directly-to-a-google-cloud-stora [Consulted this ref when putting encoded Canvas into form -- error URI too long]
+##### StackOverflow | Reference Four | https://stackoverflow.com/questions/34242155/how-to-crop-canvas-todataurl
 ##### Tania Rascia  | https://www.taniarascia.com/how-to-connect-to-an-api-with-javascript/
 ##### W3 | Capture Element | https://www.w3.org/TR/html-media-capture/
 ##### W3 | Media Capture | https://www.w3.org/TR/html-media-capture/
