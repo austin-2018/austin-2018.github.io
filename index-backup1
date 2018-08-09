@@ -40,21 +40,20 @@
          </div><!-- col md-12 -->  
          <div class="col-md-12"><h3 style="text-align:center;color:red;">THIS PLATFORM IS UNDER CONSTUCTION</h3></div>
          <div class="col-md-4">
-            <h4 style="text-align:center;">Option One: Geolocation Only -- No Camera</h4>
+            <h3 style="text-align:center;">Option One: No Camera<h3>
                  <!-- source code https://www.w3schools.com/htmL/tryit.asp?filename=tryhtml5_geolocation --> 
                  <div id="map">
                         <iframe id="google_map" src="https://maps.google.co.uk/?output=embed"></iframe>
                  </div><!-- map -->
 
-               <h4>You may need to click the "Step 1" button several times -- Loading the geolocation is slow</h4>
-
-               <p><button class="btn btn-primary btn-lg" onclick="getLocation()">Step 1: Get Your Location</button></p>
+               <p><button class="btn btn-primary btn-lg" onclick="getLocation()">Step 1: Get Location</button></p>
+               <p><h4>Click ONCE!  Wait for location to load!</h4></p>
 
               <div id="demo"></div><br>
 
               <div><!-- wrapper -->
-              <div class="alert"></div>
-                 <form id="contactForm">
+              <div class="alert" style="display:none;color:red;">SENT!</div>
+                 <form id="nocameraform">
                     <p>
                        <label>Latitude</label><br>
                        <input type="text" id="latcoords" name="latcoords"><br>
@@ -118,8 +117,9 @@
                           
                              <p><button class="capture-button btn btn-primary btn-lg">Step 1: Capture the Video</button></p>
                              <p><button id="screenshot-button" class="btn btn-primary btn-lg">Step 2: Take a Screenshot</button></p>   
-                          <img id="screenshot-img">       
-                 </div><!-- id screenshot -->
+                          <img id="screenshot-img"><br>
+                          <input type="text" name="hidden-screenshot" id="hidden-screenshot" />
+                     </div><!-- id screenshot -->
                          <script>
                             
                         const hdConstraints = {
@@ -135,15 +135,14 @@
                           then((stream) => {video.srcObject = stream}); 
                             
                        </script>
- 
                        <script>
                       const captureVideoButton =
                        document.querySelector('#screenshot .capture-button');
-                     const screenshotButton = document.querySelector('#screenshot-button');
-                     const img = document.querySelector('#screenshot img');
-                     const video = document.querySelector('#screenshot video');
+                      const screenshotButton = document.querySelector('#screenshot-button');
+                      const img = document.querySelector('#screenshot img');
+                      const video = document.querySelector('#screenshot video');
 
-                     const canvas = document.createElement('canvas');
+                      const canvas = document.createElement('canvas');
 
                      captureVideoButton.onclick = function() {
                        navigator.mediaDevices.getUserMedia(constraints).
@@ -156,6 +155,9 @@
                        canvas.getContext('2d').drawImage(video, 0, 0);
                        // Other browsers will fall back to image/png
                        img.src = canvas.toDataURL('image/webp');
+
+                       //https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/toDataURL
+                        document.getElementById("hidden-screenshot").value = canvas.toDataURL('image/webp');                                         
                      };
 
                      function handleSuccess(stream) {
@@ -164,7 +166,6 @@
                      }
                  
                  </script>
-                 
                  <script>
                     
                     const videoElement = document.querySelector('video');
@@ -235,6 +236,5 @@
 <script src="js/script.js"></script>
 <!-- <script async defer src="js/geolocate.js"></script>  -->  
 <script src="https://www.gstatic.com/firebasejs/5.3.1/firebase.js"></script>
-<script src="js/fb1.js"></script><!-- associated with the firebase js in the line immediately above -->   
-
+<script src="js/firebase1.js"></script><!-- associated with the firebase js in the line immediately above -->   
 </html>
