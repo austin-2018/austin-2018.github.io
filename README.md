@@ -18,8 +18,9 @@
 
 ##### Blog | TeamTreeHouse | Filereader API | http://blog.teamtreehouse.com/reading-files-using-the-html5-filereader-api
 ##### Capturing images from the camera in the browser using getUserMedia (with mirroring) | https://html5.by/blog/html5-image-capture-getusermedia-stream-api-mirror/
-##### Google-Groups | Reference One: | https://groups.google.com/forum/#!topic/firebase-talk/aDJvYyNIJik
-##### Google Developrs| Geolocation on HTTPS |https://developers.google.com/web/updates/2016/04/geolocation-on-secure-contexts-only
+##### Google-Groups | Reference One | https://groups.google.com/forum/#!topic/firebase-talk/aDJvYyNIJik
+##### Google Developrs| Reference One | Geolocation on HTTPS |https://developers.google.com/web/updates/2016/04/geolocation-on-secure-contexts-only
+##### Google Developers | Reference Two | https://developers.google.com/web/fundamentals/media/capturing-images/
 ##### Google Maps Platform | Maps JavaScript API | https://developers.google.com/maps/documentation/javascript/tutorial
 ##### Gorigins | http://gorigins.com/posting-a-canvas-image-to-facebook-and-twitter/
 ##### HTML5 Canvas Tutorials | https://www.html5canvastutorials.com/advanced/html5-canvas-load-image-data-url/
