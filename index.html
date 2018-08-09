@@ -119,12 +119,12 @@
                              <p><button class="capture-button btn btn-primary btn-lg">Step 1: Capture the Video</button></p>
                              <p><button id="screenshot-button" class="btn btn-primary btn-lg">Step 2: Take a Screenshot</button></p>   
                           <img id="screenshot-img"><br>
-                             <p>Updated Form</p>
+                             <p>Updated Form -- AGAIN</p>
                           
                           <!-- <input type="text" name="hidden-screenshot" id="hidden-screenshot" /> -->
                           <!-- https://stackoverflow.com/questions/33297858/input-type-file-set-base64-image-data -->
                           <h4>Input Type Hidden Below</h4>
-                          <input type="hidden" name="hidden-screenshot2" id="hidden-screenshot2" />
+                          <input type="hidden" name="hidden-screenshot" id="hidden-screenshot" />
                              <h4>Input Type Hidden Above</h4>   
                           <!-- <input type="file" name="hidden-screenshot" id="hidden-screenshot" accept="image/*" /> -->
                           </div><!-- id screenshot -->
@@ -153,8 +153,7 @@
                       const img = document.querySelector('#screenshot img');
                       const video = document.querySelector('#screenshot video');
                       const canvas = document.createElement('canvas');
-                       //https://stackoverflow.com/questions/33297858/input-type-file-set-base64-image-data   
-                      const imageData = canvas.toDataURL('image/png');
+
 
                      captureVideoButton.onclick = function() {
                        navigator.mediaDevices.getUserMedia(constraints).
@@ -168,12 +167,14 @@
                        // Other browsers will fall back to image/png
                        img.src = canvas.toDataURL('image/webp');
                        //img.src = canvas.toDataURL('image/png');
+                       //https://stackoverflow.com/questions/33297858/input-type-file-set-base64-image-data   
+                      //var imageData = canvas.toDataURL('image/png');
                        //https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/toDataURL
                        document.getElementById("hidden-screenshot").value = canvas.toDataURL('image/webp');
                        //document.getElementById("hidden-screenshot").value = canvas.toDataURL('image/png'); 
                         
                         ///https://stackoverflow.com/questions/33297858/input-type-file-set-base64-image-data
-                       document.getElementsByName("hidden-screenshot2")[0].setAttribute("value", imageData);
+                       document.getElementsByName("hidden-screenshot")[0].setAttribute("value", img);
                         
                      };
 
