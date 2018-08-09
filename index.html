@@ -40,18 +40,15 @@
          </div><!-- col md-12 -->  
          <div class="col-md-12"><h3 style="text-align:center;color:red;">THIS PLATFORM IS UNDER CONSTUCTION</h3></div>
          <div class="col-md-4">
-            <h3 style="text-align:center;">Option One: No Camera<h3>
-                 <!-- source code https://www.w3schools.com/htmL/tryit.asp?filename=tryhtml5_geolocation --> 
+                <!-- source code https://www.w3schools.com/htmL/tryit.asp?filename=tryhtml5_geolocation --> 
                  <div id="map">
                         <iframe id="google_map" src="https://maps.google.co.uk/?output=embed"></iframe>
                  </div><!-- map -->
 
                <p><button class="btn btn-primary btn-lg" onclick="getLocation()">Step 1: Get Location</button></p>
-               <p><h4>Click ONCE!  Wait for location to load!</h4></p>
-
-              <div id="demo">Your geolocation information will appear here.</div><br>
-
-              
+               <p><h4>Click ONCE!  Wait for location to load!</h4></p>              
+               <div id="demo">Your geolocation information will appear here, and load automatically into the form.</div><br>
+               <div class="alert" style="display:none;color:red;">SENT!</div>
 
                      <script>
                      var x       = document.getElementById("demo"),
@@ -76,12 +73,11 @@
                      </script>
               </div><!-- col md 4 -->       
               <div class="col-md-8">               
-                  /////
-                 <div><!-- wrapper -->
-              <div class="alert" style="display:none;color:red;">SENT!</div>
+
+                 <div><!-- wrapper for form-->
                  <form id="nocameraform">
-                      <p>        
-                          <div id="screenshot" style="text-align:center;">
+                           
+                      <div id="screenshot">
                           <!-- image capture see https://www.html5rocks.com/en/tutorials/getusermedia/intro/ -->
                           <video class="videostream" autoplay></video>
                           
@@ -90,29 +86,26 @@
                              <img id="screenshot-img"><br> 
                           <input type="text" name="hidden-screenshot" id="hidden-screenshot" />
                      </div><!-- id screenshot -->               
-                                       
-                    </p> 
-                    <p>
+                     <div><!-- latitude -->                  
                        <label>Latitude</label><br>
                        <input type="text" id="latcoords" name="latcoords"><br>
-                    </p>
-                    <p>
-                       <label>Latitude</label><br>
+                    </div>
+                    <div>
+                       <label>Longitude</label><br>
                        <input type="text" id="longcoords" name="longcoords"><br>
-                    </p>
-                   <p>
+                    </div>
+                    <div>
                      <label>Name</label><br>
                      <input type="text" name="name" id="name">
-                   </p>
-                   <p>
+                    </div>
+                    <div>
                      <label>Phone Number</label><br>
                      <input type="text" name="phone" id="phone">
-                   </p>
+                    </div>
   
                  </form>
-            </div><!-- wrapper -->
+            </div><!-- form wrapper -->
                  
-                 //////
                         <script>
                            function hasGetUserMedia() {
                              return !!(navigator.mediaDevices &&
@@ -124,7 +117,6 @@
                              alert('getUserMedia() is not supported by your browser');
                            }
                           </script>
-                           ////return here
                           <script>
                             
                         const hdConstraints = {
