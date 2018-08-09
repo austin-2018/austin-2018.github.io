@@ -111,7 +111,6 @@
                              alert('getUserMedia() is not supported by your browser');
                            }
                           </script>
-                      <form id="withcameraform"><!-- with camera -->
                           <div id="screenshot" style="text-align:center;">
                           <!-- image capture see https://www.html5rocks.com/en/tutorials/getusermedia/intro/ -->
                           <video class="videostream" autoplay></video>
@@ -120,35 +119,7 @@
                              <p><button id="screenshot-button" class="btn btn-primary btn-lg">Step 2: Take a Screenshot</button></p>   
                           <img id="screenshot-img"><br>
                           <input type="text" name="hidden-screenshot" id="hidden-screenshot" />
-                        <p><button class="btn btn-primary btn-lg" onclick="getLocation()">Step 3: Get Location</button></p>
-                          <p><h4>Click ONCE!  Wait for location to load!</h4></p>
-                             
-                       <p>
-                       <label>Latitude</label><br>
-                       <input type="text" id="latcoords1" name="latcoords1"><br>
-                    </p>
-                    <p>
-                       <label>Latitude</label><br>
-                       <input type="text" id="longcoords1" name="longcoords1"><br>
-                    </p>
-                   <p>
-                     <label>Name</label><br>
-                     <input type="text" name="name1" id="name1">
-                   </p>
-                   <p>
-                     <label>Phone Number</label><br>
-                     <input type="text" name="phone1" id="phone1">
-                   </p>
-                             
-                   <p>
-                     <button type="submit" class="btn btn-primary btn-lg" value="submit">Step 2: Submit</button>
-                   </p>   
-                             
-                             
-                             
-                             
                      </div><!-- id screenshot -->
-                 </form><!-- with camera -->
                          <script>
                             
                         const hdConstraints = {
