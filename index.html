@@ -118,8 +118,8 @@
                              <p><button class="capture-button btn btn-primary btn-lg">Step 1: Capture the Video</button></p>
                              <p><button id="screenshot-button" class="btn btn-primary btn-lg">Step 2: Take a Screenshot</button></p>   
                           <img id="screenshot-img"><br>
-                          <!-- <input type="text" name="hidden-screenshot" id="hidden-screenshot" /> -->
-                          <input type="file" name="hidden-screenshot" id="hidden-screenshot" accept="image/*" />
+                          <input type="text" name="hidden-screenshot" id="hidden-screenshot" />
+                          <!-- <input type="file" name="hidden-screenshot" id="hidden-screenshot" accept="image/*" /> -->
                           </div><!-- id screenshot -->
                         <!-- https://developers.google.com/web/fundamentals/media/capturing-images/ -->
                         <!-- https://www.codicode.com/art/upload_and_save_a_canvas_image_to_the_server.aspx -->
@@ -159,12 +159,12 @@
                        canvas.height = video.videoHeight;
                        canvas.getContext('2d').drawImage(video, 0, 0);
                        // Other browsers will fall back to image/png
-                       //img.src = canvas.toDataURL('image/webp');
-                       img.src = canvas.toDataURL('image/png');
+                       img.src = canvas.toDataURL('image/webp');
+                       //img.src = canvas.toDataURL('image/png');
 
                        //https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/toDataURL
-                        //document.getElementById("hidden-screenshot").value = canvas.toDataURL('image/webp');
-                        document.getElementById("hidden-screenshot").value = canvas.toDataURL('image/png'); 
+                        document.getElementById("hidden-screenshot").value = canvas.toDataURL('image/webp');
+                        //document.getElementById("hidden-screenshot").value = canvas.toDataURL('image/png'); 
                      };
 
                      function handleSuccess(stream) {
