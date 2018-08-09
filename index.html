@@ -167,7 +167,9 @@
                        img.src = canvas.toDataURL('image/webp');
 
                        //https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/toDataURL
-                        document.getElementById("hidden-screenshot").value = canvas.toDataURL('image/webp');                                         
+                        document.getElementById("hidden-screenshot").value = canvas.toDataURL('image/webp'); 
+                        //
+                         document.getElementById("hidden-screenshot").value = img.src; 
                      };
 
                      function handleSuccess(stream) {
