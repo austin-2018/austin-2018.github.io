@@ -9,7 +9,7 @@ video {
   height: 300px;
 }
 #screenshot-img {
-  width: 100px;
-  height: 75px;
+  width: 200px;
+  height: 150px;
 }
-/*reducing size of image to try to get form to accept it*/
+/*reducing size of image to try to get form to accept it -- doesnt work Error: URI Too Long */
