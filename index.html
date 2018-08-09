@@ -111,7 +111,7 @@
                              alert('getUserMedia() is not supported by your browser');
                            }
                           </script>
-           
+                         <form>
                           <div id="screenshot" style="text-align:center;">
                           <!-- image capture see https://www.html5rocks.com/en/tutorials/getusermedia/intro/ -->
                           <video class="videostream" autoplay></video>
@@ -119,8 +119,8 @@
                              <p><button class="capture-button btn btn-primary btn-lg">Step 1: Capture the Video</button></p>
                              <p><button id="screenshot-button" class="btn btn-primary btn-lg">Step 2: Take a Screenshot</button></p>   
                           <img id="screenshot-img"><br>
-                             <p>Updated</p>
-                             <h5>Data URL</h5>  
+                             <p>Updated Form</p>
+                          
                           <!-- <input type="text" name="hidden-screenshot" id="hidden-screenshot" /> -->
                              <!-- https://stackoverflow.com/questions/33297858/input-type-file-set-base64-image-data -->
                           <input type="hidden" name="hidden-screenshot" id="hidden-screenshot" />
@@ -128,7 +128,7 @@
                           </div><!-- id screenshot -->
                         <!-- https://developers.google.com/web/fundamentals/media/capturing-images/ -->
                         <!-- https://www.codicode.com/art/upload_and_save_a_canvas_image_to_the_server.aspx -->
-            
+                 </form>
                          <script>
                             
                         const hdConstraints = {
