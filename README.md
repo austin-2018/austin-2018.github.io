@@ -50,6 +50,7 @@
 
 ##### https://stackoverflow.com/questions/42879012/how-do-i-upload-a-base64-encoded-image-string-directly-to-a-google-cloud-stora
 ##### https://groups.google.com/forum/#!topic/firebase-talk/aDJvYyNIJik
+##### https://permadi.com/2010/10/html5-saving-canvas-image-data-using-php-and-ajax/
 
 
 
