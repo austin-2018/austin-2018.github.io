@@ -118,23 +118,13 @@
                              <p><button class="capture-button btn btn-primary btn-lg">Step 1: Capture the Video</button></p>
                              <p><button id="screenshot-button" class="btn btn-primary btn-lg">Step 2: Take a Screenshot</button></p>   
                           <img id="screenshot-img"><br>
-                          <input type="text" name="hidden-screenshot" id="hidden-screenshot" />
-                        </div><!-- id screenshot -->
+                          <!-- <input type="text" name="hidden-screenshot" id="hidden-screenshot" /> -->
+                          <input type="file" name="hidden-screenshot" id="hidden-screenshot" accept="image/*" />
+                          </div><!-- id screenshot -->
                  ///////TEST AREA
                  <!-- https://developers.google.com/web/fundamentals/media/capturing-images/ -->
                  <!-- https://www.codicode.com/art/upload_and_save_a_canvas_image_to_the_server.aspx -->
-                <button onclick="javascript:UploadPic();return false;">Replace Canvas</button>
-                 <script>
-                    function UploadPic() {
-    
-                   // Generate the image data
-                   var Pic = document.getElementById("screenshot-img").toDataURL("image/png");
-                   Pic = Pic.replace(/^data:image\/(png|jpg);base64,/, "")
-                    }          
-                    
-                    
-                    
-                 </script>
+                 Information change file type to image
                  /////TEST AREA
                  
                          <script>
