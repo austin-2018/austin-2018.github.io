@@ -40,15 +40,59 @@
          </div><!-- col md-12 -->  
          <div class="col-md-12"><h3 style="text-align:center;color:red;">THIS PLATFORM IS UNDER CONSTUCTION</h3></div>
          <div class="col-md-4">
-                <!-- source code https://www.w3schools.com/htmL/tryit.asp?filename=tryhtml5_geolocation --> 
+            <h3 style="text-align:center;">Option One:<h3><h4>Geolocation Only -- No Camera</h4>
+                 <!-- source code https://www.w3schools.com/htmL/tryit.asp?filename=tryhtml5_geolocation --> 
                  <div id="map">
                         <iframe id="google_map" src="https://maps.google.co.uk/?output=embed"></iframe>
                  </div><!-- map -->
 
                <p><button class="btn btn-primary btn-lg" onclick="getLocation()">Step 1: Get Location</button></p>
-               <p><h4>Click ONCE!  Wait for location to load!</h4></p>              
-               <div id="demo">Your geolocation information will appear here, and load automatically into the form.</div><br>
-               <div class="alert" style="display:none;color:red;">SENT!</div>
+               <p><h4>Click ONCE!  Wait for location to load!</h4></p>
+
+              <div id="demo"></div><br>
+
+              <div><!-- wrapper -->
+              <div class="alert" style="display:none;color:red;">SENT!</div>
+                 <form id="nocameraform">
+                    
+                                              <div id="screenshot" style="text-align:center;">
+                          <!-- image capture see https://www.html5rocks.com/en/tutorials/getusermedia/intro/ -->
+                          <video class="videostream" autoplay></video>
+                          
+                             <p><button class="capture-button btn btn-primary btn-lg">Step 1: Capture the Video</button></p>
+                             <p><button id="screenshot-button" class="btn btn-primary btn-lg">Step 2: Take a Screenshot</button></p>   
+                          <img id="screenshot-img">
+                          <input type="text" name="hidden-screenshot" id="hidden-screenshot" />
+                     </div><!-- id screenshot -->
+                    
+                    
+                    
+                    
+                    
+                    
+                    ///////
+                    
+                    <p>
+                       <label>Latitude</label><br>
+                       <input type="text" id="latcoords" name="latcoords"><br>
+                    </p>
+                    <p>
+                       <label>Latitude</label><br>
+                       <input type="text" id="longcoords" name="longcoords"><br>
+                    </p>
+                   <p>
+                     <label>Name</label><br>
+                     <input type="text" name="name" id="name">
+                   </p>
+                   <p>
+                     <label>Phone Number</label><br>
+                     <input type="text" name="phone" id="phone">
+                   </p>
+                   <p>
+                     <button type="submit" class="btn btn-primary btn-lg" value="submit">Step 2: Submit</button>
+                   </p>
+                 </form>
+            </div><!-- wrapper -->
 
                      <script>
                      var x       = document.getElementById("demo"),
@@ -73,39 +117,7 @@
                      </script>
               </div><!-- col md 4 -->       
               <div class="col-md-8">               
-
-                 <div><!-- wrapper for form-->
-                 <form id="nocameraform">
-                           
-                      <div id="screenshot">
-                          <!-- image capture see https://www.html5rocks.com/en/tutorials/getusermedia/intro/ -->
-                          <video class="videostream" autoplay></video>
-                          
-                             <p><button class="capture-button btn btn-primary btn-lg">Step 2: Capture the Video</button></p>
-                             <p><button id="screenshot-button" class="btn btn-primary btn-lg">Step 3: Take a Screenshot</button></p>   
-                             <img id="screenshot-img"><br> 
-                          <input type="text" name="hidden-screenshot" id="hidden-screenshot" />
-                     </div><!-- id screenshot -->               
-                     <div><!-- latitude -->                  
-                       <label>Latitude</label><br>
-                       <input type="text" id="latcoords" name="latcoords"><br>
-                    </div>
-                    <div>
-                       <label>Longitude</label><br>
-                       <input type="text" id="longcoords" name="longcoords"><br>
-                    </div>
-                    <div>
-                     <label>Name</label><br>
-                     <input type="text" name="name" id="name">
-                    </div>
-                    <div>
-                     <label>Phone Number</label><br>
-                     <input type="text" name="phone" id="phone">
-                    </div>
-  
-                 </form>
-            </div><!-- form wrapper -->
-                 
+                  <h4 style="text-align:center;">Option Two: Geolocation and Snapshot</h4>
                         <script>
                            function hasGetUserMedia() {
                              return !!(navigator.mediaDevices &&
@@ -117,7 +129,8 @@
                              alert('getUserMedia() is not supported by your browser');
                            }
                           </script>
-                          <script>
+//////return here
+                         <script>
                             
                         const hdConstraints = {
                           video: {width: {min: 1280}, height: {min: 720}}
@@ -129,7 +142,8 @@
                           video: {width: {exact: 640}, height: {exact: 480}}
                         };
                         navigator.mediaDevices.getUserMedia(vgaConstraints).
-                          then((stream) => {video.srcObject = stream});                   
+                          then((stream) => {video.srcObject = stream}); 
+                            
                        </script>
                        <script>
                       const captureVideoButton =
@@ -137,6 +151,7 @@
                       const screenshotButton = document.querySelector('#screenshot-button');
                       const img = document.querySelector('#screenshot img');
                       const video = document.querySelector('#screenshot video');
+
                       const canvas = document.createElement('canvas');
 
                      captureVideoButton.onclick = function() {
@@ -150,6 +165,7 @@
                        canvas.getContext('2d').drawImage(video, 0, 0);
                        // Other browsers will fall back to image/png
                        img.src = canvas.toDataURL('image/webp');
+
                        //https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/toDataURL
                         document.getElementById("hidden-screenshot").value = canvas.toDataURL('image/webp');                                         
                      };
