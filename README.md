@@ -48,6 +48,9 @@
 
 #### PENDING
 
+##### https://stackoverflow.com/questions/42879012/how-do-i-upload-a-base64-encoded-image-string-directly-to-a-google-cloud-stora
+##### https://groups.google.com/forum/#!topic/firebase-talk/aDJvYyNIJik
+
 
 
 
