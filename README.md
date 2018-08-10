@@ -42,14 +42,16 @@
 ##### MDN Web Docs | Reference Eight | https://developer.mozilla.org/en-US/docs/Web/HTML/Supported_media_formats
 ##### MDN Web Docs | Reference Nine | https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs
 ##### MDN Web Docs | Reference Ten | https://developer.mozilla.org/en-US/docs/Web/API/MediaStreamTrack/stop
+##### Permadi.com |Reference One | https://permadi.com/2010/10/html5-saving-canvas-image-data-using-php-and-ajax/
 ##### Stack Overflow | Reference One | https://stackoverflow.com/questions/16338937/html-media-capture-api-vs-getusermedia
 ##### Stack Overflow | Reference Two | https://stackoverflow.com/questions/23916566/html5-input-type-file-accept-image-capture-camera-display-as-image-rat
-##### StackOverflow | Reference Three |https://stackoverflow.com/questions/42879012/how-do-i-upload-a-base64-encoded-image-string-directly-to-a-google-cloud-stora [Consulted this ref when putting encoded Canvas into form -- error URI too long]
+##### StackOverflow | Reference Three [Re: Browser Error -- URI too long] |https://stackoverflow.com/questions/42879012/how-do-i-upload-a-base64-encoded-image-string-directly-to-a-google-cloud-stora 
 ##### StackOverflow | Reference Four | https://stackoverflow.com/questions/33297858/input-type-file-set-base64-image-data
 ##### StackOverflow | Reference Five | https://stackoverflow.com/questions/34242155/how-to-crop-canvas-todataurl
 ##### StackOverflow | Reference Six | Data URI |https://stackoverflow.com/questions/4998908/convert-data-uri-to-file-then-append-to-formdata/5100158
 ##### StackOverflow | Reference Seven |https://stackoverflow.com/questions/4998908/convert-data-uri-to-file-then-append-to-formdata/5100158
 ##### StackOverflow | Reference Eight | https://stackoverflow.com/questions/42879012/how-do-i-upload-a-base64-encoded-image-string-directly-to-a-google-cloud-stora
+##### StackOverflow | Reference Nine [Re: Blob] | https://stackoverflow.com/questions/19032406/convert-html5-canvas-into-file-to-be-uploaded
 ##### Tania Rascia  | https://www.taniarascia.com/how-to-connect-to-an-api-with-javascript/
 ##### W3 | Capture Element | https://www.w3.org/TR/html-media-capture/
 ##### W3 | Media Capture | https://www.w3.org/TR/html-media-capture/
@@ -62,8 +64,8 @@
 
 #### PENDING
 
+##### https://web.archive.org/web/20160425180542/http://blog.devteaminc.co/posting-a-canvas-image-to-twitter-using-oauth/
 
-##### https://permadi.com/2010/10/html5-saving-canvas-image-data-using-php-and-ajax/
 
 
 
