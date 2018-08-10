@@ -1,4 +1,4 @@
-1. Investigate XmlHttpRequest as it applies to project (for context, see excerpt 1)
+1. Investigate XmlHttpRequest as it applies to project (for context, see excerpts 1 and 3)
 1. Investigate significance of document.getElementsByName("myHiddenField")[0].setAttribute("value", imageData); in alleviating browser error response of URL too long in form field (for context, see excerpt 2)
 
 ##### Input type=“file” set base64 image data
@@ -22,8 +22,35 @@ Maybe that's possible to overcome this with XmlHttpRequest?
 
 Just create a hidden input element in your form. (notice the type)
 
-<input type="hidden" name="myHiddenField"> 
+        <input type="hidden" name="myHiddenField"> 
 Attach your data to the value of the element before submitting.
 
-var imageData = canvas.toDataURL('image/png');
-document.getElementsByName("myHiddenField")[0].setAttribute("value", imageData);
+        var imageData = canvas.toDataURL('image/png');
+        document.getElementsByName("myHiddenField")[0].setAttribute("value", imageData);
+
+##### EXCERPT 3
+
+UPDATE
+
+If your server demands to have the parameter "filename" in the submitted data, then include that string as the name of the input element.
+
+        <input type="hidden" name="filename"/>
+This will trick the form to submit your data with the "filename" parameter included in it.
+
+If you want to use XMLHttpRequest for this, following is a sample:
+
+        //Prepare data to be sent
+        var imageData = canvas.toDataURL('image/png');
+        var params = "filename=" + imageData;
+
+        //Initiate the request
+        var httpRequest = new XMLHttpRequest();            
+        httpRequest.open('POST', 'test.php', true);
+
+        //Send proper headers
+        httpRequest.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        httpRequest.setRequestHeader("Content-length", params.length);
+        httpRequest.setRequestHeader("Connection", "close");
+
+        //Send your data
+        httpRequest.send(params);
