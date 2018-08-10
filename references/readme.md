@@ -1,10 +1,4 @@
-# CONNECT 
-
-### Find parents deported from the U.S., record their locations and photographs, to be put into a database so that children and caretakers can have a chance of re-unification.
-
-##### July 27, 2018: There are still hundreds of children still reunited to parents, because they are considered ineligible.   There's many reasons why some parents would be considered ineligible to be reunited with their children, but one of the reasons is that the parent has already been deported.  This platform aims to provide an online meeting place and locater for the parent and child who still hope to find one another. 
-
-
+# REFERENCES USED IN THIS PROJECT
 
 ### SOURCES and REFERENCES
 
