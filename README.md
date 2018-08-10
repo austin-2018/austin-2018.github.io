@@ -14,7 +14,7 @@
 ##### HTML5 Rocks | Capturing Audio and Video in HTML5 | https://www.html5rocks.com/en/tutorials/getusermedia/intro/ | Apache License 2.0
 ##### HTML5 Tutorials: Detect user's location with HTML Geolocation | https://www.youtube.com/watch?v=BqI54Snkw0s 
 
-#### Part Two: References
+#### Part Two: References Used in building the platform:
 
 ##### Blog | TeamTreeHouse | Filereader API | http://blog.teamtreehouse.com/reading-files-using-the-html5-filereader-api
 ##### Capturing images from the camera in the browser using getUserMedia (with mirroring) | https://html5.by/blog/html5-image-capture-getusermedia-stream-api-mirror/
