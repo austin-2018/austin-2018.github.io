@@ -22,8 +22,9 @@ function submitNoCameraForm(e){
   var longcoords = getInputValNoCamera('longcoords'); 
   var name = getInputValNoCamera('name');
   var phone = getInputValNoCamera('phone');
+  var myHiddenField = getInputValNoCamera('myHiddenField');
   
-  saveMessageNoCamera(latcoords, longcoords, name, phone);
+  saveMessageNoCamera(latcoords, longcoords, name, phone, myHiddenField);
   
     // Show alert
   document.querySelector('.alert').style.display = 'block';
@@ -42,12 +43,13 @@ function getInputValNoCamera(id){
 }
 
 // Save message to firebase
-function saveMessageNoCamera(latcoords, longcoords, name, phone){
+function saveMessageNoCamera(latcoords, longcoords, name, phone, myHiddenField){
   var newMessageRefNoCamera = messagesRefNoCamera.push();
   newMessageRefNoCamera.set({
     latcoords: latcoords,
     longcoords:longcoords,
     name: name,
-    phone:phone
+    phone:phone,
+    myHiddenField:myHiddenField
   });
 }
