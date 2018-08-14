@@ -39,72 +39,9 @@
 
          </div><!-- col md-12 -->  
          <div class="col-md-12"><h3 style="text-align:center;color:red;">THIS PLATFORM IS UNDER CONSTUCTION</h3></div>
-         <div class="col-md-4">
-            <h3 style="text-align:center;">Option One: No Camera<h3>
-                 <!-- source code https://www.w3schools.com/htmL/tryit.asp?filename=tryhtml5_geolocation --> 
-                 <div id="map">
-                        <iframe id="google_map" src="https://maps.google.co.uk/?output=embed"></iframe>
-                 </div><!-- map -->
-
-               <p><button class="btn btn-primary btn-lg" onclick="getLocation()">Step 1: Get Location</button></p>
-               <p><h4>Click ONCE!  Wait for location to load!</h4></p>
-
-              <div id="demo"></div><br>
-
-              <div><!-- wrapper -->
-              <div class="alert" style="display:none;color:red;">SENT!</div>
-                 <form id="nocameraform">
-                    <p>
-                       <label>Latitude</label><br>
-                       <input type="text" id="latcoords" name="latcoords"><br>
-                    </p>
-                    <p>
-                       <label>Latitude</label><br>
-                       <input type="text" id="longcoords" name="longcoords"><br>
-                    </p>
-                   <p>
-                     <label>Name</label><br>
-                     <input type="text" name="name" id="name">
-                   </p>
-                   <p>
-                     <label>Phone Number</label><br>
-                     <input type="text" name="phone" id="phone">
-                   </p>
-                    <p>
-                    <label>Hidden Field</label><br>
-                    <input type="hidden" name="myHiddenField"> 
-                    </p>
-                    
-                   <p>
-                     <button type="submit" class="btn btn-primary btn-lg" value="submit">Step 2: Submit</button>
-                   </p>
-                 </form>
-            </div><!-- wrapper -->
-
-                     <script>
-                     var x       = document.getElementById("demo"),
-                         xlat    = document.getElementById("latcoords"),
-                         xlong   = document.getElementById("longcoords");
-                        
-                     function getLocation() {
-                         if (navigator.geolocation) {
-                             navigator.geolocation.getCurrentPosition(showPosition);
-                         } else { 
-                             x.innerHTML = "Geolocation is not supported by this browser.";
-                         }
-                     }
-
-                     function showPosition(position) {
-                         x.innerHTML = "Latitude: " + position.coords.latitude + 
-                         "<br>Longitude: " + position.coords.longitude;
-                        
-                        document.getElementById("latcoords").value = position.coords.latitude;
-                        document.getElementById("longcoords").value = position.coords.longitude;
-                     }
-                     </script>
-              </div><!-- col md 4 -->       
-              <div class="col-md-8">               
-                  <h4 style="text-align:center;">OPTION TWO: USING CAMERA</h4>
+      
+              <div class="col-md-4"><!-- first md-4 -->               
+                  <h3 style="text-align:center;">ONE: GET A PHOTO</h3>
                         <script>
                            function hasGetUserMedia() {
                              return !!(navigator.mediaDevices &&
@@ -242,8 +179,78 @@
                         }
                  </script>   
                  <!-- end image capture -->
-                   
-                </div><!-- col-md  8 -->
+                </div><!-- first md-4 -->
+          
+             <div class="col-md-4"><!-- second md-4 -->
+              <h3 style="text-align:center;">TWO: GET LOCATION<h3>
+                 <!-- source code https://www.w3schools.com/htmL/tryit.asp?filename=tryhtml5_geolocation --> 
+                 <div id="map">
+                        <iframe id="google_map" src="https://maps.google.co.uk/?output=embed"></iframe>
+                 </div><!-- map -->
+
+               <p><button class="btn btn-primary btn-lg" onclick="getLocation()">Step 1: Get Location</button></p>
+               <p><h4>Click ONCE!  Wait for location to load!</h4></p>
+
+              <div id="demo"></div><br>
+
+              <div class="alert" style="display:none;color:red;">SENT!</div>
+                 <form id="nocameraform">
+                    <p>
+                       <label>Latitude</label><br>
+                       <input type="text" id="latcoords" name="latcoords"><br>
+                    </p>
+                    <p>
+                       <label>Latitude</label><br>
+                       <input type="text" id="longcoords" name="longcoords"><br>
+                    </p>
+                    
+                 </div><!-- second md-4 -->
+                 <div class="col-md-4"><!-- third md-4 -->
+                    
+                    <h3>THREE: Add Name and Phone - then SUBMIT</h3>
+                    
+                   <p>
+                     <label>Name</label><br>
+                     <input type="text" name="name" id="name">
+                   </p>
+                   <p>
+                     <label>Phone Number</label><br>
+                     <input type="text" name="phone" id="phone">
+                   </p>
+                    <p>
+                    <label>Special Hidden Field</label><br>
+                    <input type="hidden" name="myHiddenField"> 
+                    </p>
+
+                   <p>
+                     <button type="submit" class="btn btn-primary btn-lg" value="submit">SUBMIT!</button>
+                   </p>
+                 </form>
+ 
+                     <script>
+                     var x       = document.getElementById("demo"),
+                         xlat    = document.getElementById("latcoords"),
+                         xlong   = document.getElementById("longcoords");
+                        
+                     function getLocation() {
+                         if (navigator.geolocation) {
+                             navigator.geolocation.getCurrentPosition(showPosition);
+                         } else { 
+                             x.innerHTML = "Geolocation is not supported by this browser.";
+                         }
+                     }
+
+                     function showPosition(position) {
+                         x.innerHTML = "Latitude: " + position.coords.latitude + 
+                         "<br>Longitude: " + position.coords.longitude;
+                        
+                        document.getElementById("latcoords").value = position.coords.latitude;
+                        document.getElementById("longcoords").value = position.coords.longitude;
+                     }
+                     </script>
+              </div><!-- col md 4 --> 
+          
+          
             </div><!-- container -->  
        </div><!-- row -->
 
