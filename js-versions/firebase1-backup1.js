@@ -9,12 +9,12 @@
   };
   firebase.initializeApp(config);
 
+
 // Reference messages collection
 var messagesRefNoCamera = firebase.database().ref('messages');
 
 // Listen for form submit
 document.getElementById('nocameraform').addEventListener('submit', submitNoCameraForm);
-
 
 // Submit form
 function submitNoCameraForm(e){
@@ -25,7 +25,7 @@ function submitNoCameraForm(e){
   var phone = getInputValNoCamera('phone');
   var myHiddenField = getInputValNoCamera('myHiddenField');
   
-  saveMessageNoCamera(latcoords, longcoords, name, phone, myHiddenField);
+  saveMessageNoCamera(name, phone, latcoords, longcoords, myHiddenField);
   
     // Show alert
   document.querySelector('.alert').style.display = 'block';
@@ -44,13 +44,13 @@ function getInputValNoCamera(id){
 }
 
 // Save message to firebase
-function saveMessageNoCamera(latcoords, longcoords, name, phone, myHiddenField){
+function saveMessageNoCamera(name, phone, latcoords, longcoords, myHiddenField){
   var newMessageRefNoCamera = messagesRefNoCamera.push();
   newMessageRefNoCamera.set({
-    latcoords: latcoords,
-    longcoords:longcoords,
     name: name,
     phone:phone,
+    latcoords: latcoords,
+    longcoords:longcoords,
     myHiddenField:myHiddenField
   });
 }
