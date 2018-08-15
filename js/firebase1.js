@@ -44,13 +44,13 @@ function getInputValNoCamera(id){
 }
 
 // Save message to firebase
-function saveMessageNoCamera(latcoords, longcoords, name, phone, myHiddenField){
+function saveMessageNoCamera(name, phone, latcoords, longcoords, myHiddenField){
   var newMessageRefNoCamera = messagesRefNoCamera.push();
   newMessageRefNoCamera.set({
-    latcoords: latcoords,
-    longcoords:longcoords,
     name: name,
     phone:phone,
+    latcoords: latcoords,
+    longcoords:longcoords,
     myHiddenField:myHiddenField
   });
 }
