@@ -24,7 +24,7 @@ function submitNoCameraForm(e){
   var phone = getInputValNoCamera('phone');
   var myHiddenField = getInputValNoCamera('myHiddenField');
   
-  saveMessageNoCamera(latcoords, longcoords, name, phone, myHiddenField);
+  saveMessageNoCamera(name, phone, latcoords, longcoords, myHiddenField);
   
     // Show alert
   document.querySelector('.alert').style.display = 'block';
