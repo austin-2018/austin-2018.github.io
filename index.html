@@ -61,7 +61,7 @@
                              <p><button id="screenshot-button" class="btn btn-primary btn-lg">Step 2: Take a Screenshot</button></p>   
                           <img id="screenshot-img"><br>
                              <p> 
-                             <h5>Data URL</h5>  
+                             <h5 style="display:none;">Data URL</h5>  
                           <input type="text" style="display:none;" name="hidden-screenshot" id="hidden-screenshot" />
                              </p>
                           <!-- <input type="file" name="hidden-screenshot" id="hidden-screenshot" accept="image/*" /> -->
@@ -190,11 +190,12 @@
 
                <p><button class="btn btn-primary btn-lg" onclick="getLocation()">Step 1: Get Location</button></p>
                <p><h4>Click ONCE!  Wait for location to load!</h4></p>
-
+               <p>You will see the location points appear when it is done</p>
               <div id="demo"></div><br>
 
               <div class="alert" style="display:none;color:red;">SENT!</div>
                  <form id="nocameraform">
+                    <div style="display:none;"><!-- hide the input forms -->
                     <p>
                        <label>Latitude</label><br>
                        <input type="text" id="latcoords" name="latcoords"><br>
@@ -203,7 +204,7 @@
                        <label>Latitude</label><br>
                        <input type="text" id="longcoords" name="longcoords"><br>
                     </p>
-                    
+                    </div><!-- hide the input forms -->
                  </div><!-- second md-4 -->
                  <div class="col-md-4"><!-- third md-4 -->
                     
