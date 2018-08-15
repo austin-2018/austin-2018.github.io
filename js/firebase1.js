@@ -9,6 +9,7 @@
   };
   firebase.initializeApp(config);
 
+
 // Reference messages collection
 var messagesRefNoCamera = firebase.database().ref('messages');
 
