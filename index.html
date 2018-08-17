@@ -25,7 +25,6 @@
 
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/screenshot.css">
-   <link rel="stylesheet" href="css/multistepform.css">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
  </head>
   <!-- <body onload="showMyFace()">  -->
@@ -41,7 +40,7 @@
          </div><!-- col md-12 -->  
          <div class="col-md-12"><h3 style="text-align:center;color:red;">THIS PLATFORM IS UNDER CONSTUCTION</h3></div>
       
-              <div class="col-md-4"><!-- tab formerly first md-4 -->            
+              <div class="col-md-4">           
                   <h3 style="text-align:center;">ONE: GET A PHOTO</h3>
                         <script>
                            function hasGetUserMedia() {
@@ -182,8 +181,8 @@
                  </script>   
                  <!-- end image capture -->
                 </div><!-- first md-4 -->
-          ////<div class="col-md-8">
-             <div class="tab"><!-- second tab formerly md-4 -->
+
+             <div class="col-md-4">
               <h3 style="text-align:center;">TWO: GET LOCATION<h3>
                  <!-- source code https://www.w3schools.com/htmL/tryit.asp?filename=tryhtml5_geolocation --> 
                  <div id="map">
@@ -208,7 +207,7 @@
                     </p>
                     </div><!-- hide the input forms -->
                  </div><!-- second md-4 -->
-                <div class="tab"><!-- third tab formerly md-4 -->
+                <div class="col-md-4">
                     
                      <h3>THREE: Add Name and Phone - then SUBMIT</h3>
                     
@@ -251,16 +250,13 @@
                         document.getElementById("longcoords").value = position.coords.longitude;
                      }
                      </script>
-              </div><!-- tab formerly col md 4 --> 
-                /////
-              </div><!-- col md8 -->
-            </div><!-- container -->  
+              </div><!-- col md 4 --> 
+          </div><!-- container -->  
        </div><!-- row -->
 
   </body>
 <script src="js/script.js"></script>
 <script src="js/geolocate.js"></script>
-<script src="js/multistepform.js"></script> 
 <script src="https://www.gstatic.com/firebasejs/5.3.1/firebase.js"></script>
 <script src="js/firebase1.js"></script><!-- associated with the firebase js in the line immediately above -->   
 </html>
