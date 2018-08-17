@@ -88,7 +88,7 @@
                        </script>
                        <script>
                       const captureVideoButton =
-                       document.querySelector('#screenshot .capture-button');
+                      document.querySelector('#screenshot .capture-button');
                       const screenshotButton = document.querySelector('#screenshot-button');
                       const img = document.querySelector('#screenshot img');
                       const video = document.querySelector('#screenshot video');
@@ -213,11 +213,11 @@
                     
                    <p>
                      <label>Name</label><br>
-                     <input type="text" name="name" id="name">
+                     <input type="text" name="name" id="name" oninput="this.className = ''">
                    </p>
                    <p>
                      <label>Phone Number</label><br>
-                     <input type="text" name="phone" id="phone">
+                     <input type="text" name="phone" id="phone" oninput="this.className = ''">
                    </p>
                     <p>
                     <label>Special Hidden Field</label><br>
