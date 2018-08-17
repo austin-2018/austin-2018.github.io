@@ -58,17 +58,14 @@
                           <video class="videostream" autoplay></video>
                           
                              <p><button class="capture-button btn btn-primary btn-lg">Step 1: Capture the Video</button></p>
-                             <p><button id="screenshot-button" class="btn btn-primary btn-lg">Step 2: Take a Screenshot</button></p>   
+   
                           <img id="screenshot-img"><br>
+                          <p><button id="screenshot-button" class="btn btn-primary btn-lg">Step 2: Take a Screenshot</button></p>
                              <p> 
                              <h5>Data URL</h5>  
-                          <input type="text" name="hidden-screenshot" id="hidden-screenshot" />
+                          <input type="text" name="hidden-screenshot" id="hidden-screenshot" style="display:none;" />
                              </p>
-                          <!-- <input type="file" name="hidden-screenshot" id="hidden-screenshot" accept="image/*" /> -->
-                          </div><!-- id screenshot -->
-                        <!-- https://developers.google.com/web/fundamentals/media/capturing-images/ -->
-                        <!-- https://www.codicode.com/art/upload_and_save_a_canvas_image_to_the_server.aspx -->
-                 
+                          </div><!-- id screenshot -->                
                          <script>
                             
                         const hdConstraints = {
@@ -256,7 +253,7 @@
 
   </body>
 <script src="js/script.js"></script>
-<!-- <script async defer src="js/geolocate.js"></script>  -->  
+<script async defer src="js/geolocate.js"></script>  
 <script src="https://www.gstatic.com/firebasejs/5.3.1/firebase.js"></script>
 <script src="js/firebase1.js"></script><!-- associated with the firebase js in the line immediately above -->   
 </html>
