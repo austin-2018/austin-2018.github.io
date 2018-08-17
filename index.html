@@ -56,14 +56,15 @@
                           <!-- image capture see https://www.html5rocks.com/en/tutorials/getusermedia/intro/ -->
                           <video class="videostream" autoplay></video>
                           
-                             <p><button class="capture-button btn btn-primary btn-lg">Step 1: Capture the Video</button></p>
-   
+                          <p><button class="capture-button btn btn-primary btn-lg">Step 1: Capture the Video</button></p>
+                           
                           <img id="screenshot-img"><br>
-                          <p><button id="screenshot-button" class="btn btn-primary btn-lg">Step 2: Take a Screenshot</button></p>
-                             <p> 
-                             <h5>Data URL</h5>  
+                             
+                          <p style="padding-top:25px;"><button id="screenshot-button" class="btn btn-primary btn-lg">Step 2: Take a Screenshot</button></p>
+                            
+                      
                           <input type="text" name="hidden-screenshot" id="hidden-screenshot" style="display:none;" />
-                             </p>
+                            
                           </div><!-- id screenshot -->                
                          <script>
                             
@@ -102,9 +103,7 @@
                        imageData = img.src; 
                        //img.src = canvas.toDataURL('image/png');
                        //https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/toDataURL
-                       document.getElementById("hidden-screenshot").value = canvas.toDataURL('image/webp');
-                       //document.getElementById("hidden-screenshot").value = canvas.toDataURL('image/png');
-                    
+                       document.getElementById("hidden-screenshot").value = canvas.toDataURL('image/webp');                   
                        document.getElementsByName("myHiddenField")[0].setAttribute("value", imageData);
                      };
 
