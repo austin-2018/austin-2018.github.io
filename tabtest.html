@@ -39,7 +39,7 @@
              <p>It is believed that many parents did not understand the forms they were signing while in detention, and were simply signing anything in order to get their children back.  This platform aims to provide a means for parent and child to reunite through images and geolocation only, thus alleviating the need for the depported parents to understand English -- or even be literate -- in order to find their child. By clicking buttons, geolocation and images may be captured and sent to a centralized database, which in turn, may be shared among agencies.</p>
  
          </div><!-- col md-12 --> 
-          <div class="col-md-12" style="background-color:yellow;">
+          <div class="col-md-6">
            
 
                <h1>Register:</h1>
@@ -65,7 +65,57 @@
                              <input type="text" name="hidden-screenshot" id="hidden-screenshot" style="display:none;" />
                           </div><!-- id screenshot -->  
                   
-                  ///////////
+          </div><!-- col md6 for screenshot -->
+             
+                          <div class="col-md-4"><!-- second md-4 -->
+                 <!-- source code https://www.w3schools.com/htmL/tryit.asp?filename=tryhtml5_geolocation --> 
+                 <div id="map">
+                      <iframe id="google_map" src="https://maps.google.co.uk/?output=embed"></iframe>
+                 </div><!-- map -->
+
+               <p><button class="btn btn-primary btn-lg" onclick="getLocation()">Step 3: Get Location</button></p>
+               <p><h4>Click ONCE!  Wait for location to load!</h4></p>
+
+              <div id="demo"></div><br>
+
+              <div class="alert" style="display:none;color:red;">SENT!</div>
+                 <form id="nocameraform">
+                    <p>
+                       <label>Latitude</label><br>
+                       <input type="text" id="latcoords" name="latcoords"><br>
+                    </p>
+                    <p>
+                       <label>Latitude</label><br>
+                       <input type="text" id="longcoords" name="longcoords"><br>
+                    </p>
+                    
+                 </div><!-- second md-4 -->
+                 <div class="col-md-4"><!-- third md-4 -->
+                   
+                   <p>
+                     <label>Name</label><br>
+                     <input type="text" name="name" id="name">
+                   </p>
+                   <p>
+                     <label>Phone Number</label><br>
+                     <input type="text" name="phone" id="phone">
+                   </p>
+                    <p>
+                    <label>Special Hidden Field</label><br>
+                    <input type="hidden" name="myHiddenField" id="myHiddenField"> 
+                    </p>
+
+                   <p>
+                     <button type="submit" class="btn btn-primary btn-lg" value="submit">SUBMIT!</button>
+                   </p>
+                 </form>
+             
+             
+             
+             
+          <div class="col-md-6"<!-- geolocation -->
+          </div><!-- col md-6 for geolocation -->
+          <div class="col-md-12">
               <form id="regForm" action="">   
                  Name: 
                  <p><input placeholder="First name..." oninput="this.className = ''"></p>
