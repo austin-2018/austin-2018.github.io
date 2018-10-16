@@ -26,3 +26,4 @@
                                 function onMIDIFailure() {
                                     console.log('Could not access your MIDI devices.');
                                 }
+ #### Third, MIDI messages are conveyed back and forth between inputs and outputs with a MIDIMessageEvent object. These messages contain information about the MIDI event such as pitch, velocity (how softly or loudly a note is played), timing, and more. We can start collecting these messages by adding simple callback functions (listeners) to our inputs and outputs.
